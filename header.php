@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Администрация Кораблинского района</title>
-  <?php $tmpl_dir=get_template_directory_uri(); ?>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo $tmpl_dir; ?>/style.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 
 </head>
 <body>
@@ -16,7 +15,7 @@
     <div class="header-inner">
       <div class="header-inner__logo">
         <a href="/" title="На главную">
-          <img src="<?php echo $tmpl_dir; ?>/img/logo.png" width="92" height="112" alt="Герб">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" width="92" height="112" alt="Герб">
         </a>
       </div>
       <div class="header-inner__content">

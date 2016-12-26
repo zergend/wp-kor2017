@@ -35,8 +35,7 @@
 </footer>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<?php $tmpl_dir=get_template_directory_uri(); ?>
-<script src="<?php echo $tmpl_dir; ?>/js/korablino62.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/korablino62.js"></script>
 <!-- Yandex.Metrika counter + code in the file 'korablino62.js' -->
 
 <noscript>
