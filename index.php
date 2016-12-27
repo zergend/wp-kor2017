@@ -7,41 +7,8 @@
 </div>
 <main class="main-content">
 
-  <div class="column  column--left">
-    <nav class="menu-vertical">
-      <ul class="menu-vertical__list">
-        <li class="menu-vertical__item  current-menu-item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="menu-vertical__item">
-          <a href="#">Администрация</a>
-        </li>
-        <li class="menu-vertical__item  menu-item-has-children">
-          <a href="#">Новости</a>
-          <ul class="menu-vertical__list  submenu">
-            <li class="menu-vertical__item">
-              <a href="#">Подменю 1</a>
-            </li>
-            <li class="menu-vertical__item">
-              <a href="#">Подменю 2</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-vertical__item">
-          <a href="#">Дума</a>
-        </li>
-        <li class="menu-vertical__item">
-          <a href="#">Отдел муниципального заказа и потребительского рынка</a>
-        </li>
-        <li class="menu-vertical__item">
-          <a href="#">Пожарная безопасность</a>
-        </li>
-        <li class="menu-vertical__item">
-          <a href="#">Поселения</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<?php get_sidebar("left"); ?>
+
   <div class="column  column--middle">
     <div class="main-slider">
       <input type="radio" name="point" id="slide1" class="main-slider__btn" checked>
@@ -103,22 +70,7 @@
     </div>
   </div>
 
-  <div class="column  column--right">
-    <div class="widget-area">
-      <a class="w--red-line" href="/goryachaya-liniya/">Противодействие коррупции</a>
-      <a class="w--red" href="/goryachaya-liniya/">Горячая линия</a>
-    </div>
-    <div class="widget-area">
-      <a class="w--blue" href="/goryachaya-liniya/">Ещё одна Горячая линия на пару строк</a>
-    </div>
-    <div class="widget-area">
-      <a class="w--blue-line" href="/goryachaya-liniya/">Ещё одна Горячая линия на пару строк в синей рамке на белом фоне</a>
-    </div>
-    <div class="widget-area">
-      <a class="w--red-line" href="/goryachaya-liniya/">Ещё одна Горячая линия на пару строк в красной рамке на белом фоне</a>
-    </div>
-
-  </div>
+  <?php get_sidebar("right"); ?>
 
 </main>
 

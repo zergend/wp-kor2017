@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-
+  <?php wp_head(); ?>
 </head>
 <body>
   <header class="main-header">
@@ -33,12 +33,7 @@
               </li>
             </ul>
           </nav>
-          <div class="site-search">
-            <form action="http://www.korablino62.ru/" method="get" class="site-search__form">
-                <input name="s" placeholder="Поиск по сайту" type="search" required>
-                <button type="submit"></button>
-            </form>
-          </div>
+          <?php get_search_form(); ?>
         </div>
 
         <div class="header-inner__row2">
