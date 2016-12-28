@@ -1,13 +1,4 @@
-/*
-Theme Name: Администрация Кораблинского района v.2017
-Theme URI: http://www.blogsector.ru
-Description: Тема для администрации муниципального образования
-Author: Сергей Дёмин
-Version: 1.00
-*/
-
-
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! test normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -21,7 +12,6 @@ html {
   /* 1 */
   line-height: 1.15;
   /* 2 */
-
   -ms-text-size-adjust: 100%;
   /* 3 */
   -webkit-text-size-adjust: 100%;
@@ -51,9 +41,8 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  margin: 0.67em 0;
-
   font-size: 2em;
+  margin: 0.67em 0;
 }
 /* Grouping content
    ========================================================================== */
@@ -78,12 +67,11 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  /* 1 */
-  overflow: visible;
-
   box-sizing: content-box;
   /* 1 */
   height: 0;
+  /* 1 */
+  overflow: visible;
   /* 2 */
 }
 /**
@@ -105,7 +93,6 @@ pre {
 a {
   background-color: transparent;
   /* 1 */
-
   -webkit-text-decoration-skip: objects;
   /* 2 */
 }
@@ -122,12 +109,11 @@ a:hover {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
+  border-bottom: none;
   /* 1 */
   text-decoration: underline;
   /* 2 */
   text-decoration: underline dotted;
-
-  border-bottom: none;
   /* 2 */
 }
 /**
@@ -166,8 +152,8 @@ dfn {
  * Add the correct background and color in IE 9-.
  */
 mark {
-  color: #000;
   background-color: #ff0;
+  color: #000;
 }
 /**
  * Add the correct font size in all browsers.
@@ -181,12 +167,10 @@ small {
  */
 sub,
 sup {
-  position: relative;
-
-  vertical-align: baseline;
-
   font-size: 75%;
   line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 sub {
   bottom: -0.25em;
@@ -208,7 +192,6 @@ video {
  */
 audio:not([controls]) {
   display: none;
-
   height: 0;
 }
 /**
@@ -234,14 +217,13 @@ input,
 optgroup,
 select,
 textarea {
-  /* 1 */
-  margin: 0;
-
   font-family: sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
+  /* 1 */
+  margin: 0;
   /* 2 */
 }
 /**
@@ -281,9 +263,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  padding: 0;
-
   border-style: none;
+  padding: 0;
 }
 /**
  * Restore the focus styles unset by the previous rule.
@@ -298,10 +279,9 @@ button:-moz-focusring,
  * Change the border, margin, and padding in all browsers (opinionated).
  */
 fieldset {
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
-
-  border: 1px solid #c0c0c0;
 }
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -310,20 +290,17 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
   /* 2 */
   display: table;
-
-  box-sizing: border-box;
   /* 1 */
   max-width: 100%;
   /* 1 */
   padding: 0;
   /* 3 */
-
   white-space: normal;
-  /* 1 */
-
-  color: inherit;
   /* 1 */
 }
 /**
@@ -333,7 +310,6 @@ legend {
 progress {
   display: inline-block;
   /* 1 */
-
   vertical-align: baseline;
   /* 2 */
 }
@@ -366,10 +342,9 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
+  -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-
-  -webkit-appearance: textfield;
   /* 2 */
 }
 /**
@@ -384,10 +359,9 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
+  -webkit-appearance: button;
   /* 1 */
   font: inherit;
-
-  -webkit-appearance: button;
   /* 2 */
 }
 /* Interactive
@@ -431,13 +405,10 @@ template {
 /* START */
 body {
   margin: 0;
-
   text-align: center;
   text-transform: uppercase;
-
   color: #333;
   background-color: #fff;
-
   font-family: 'Ubuntu Condensed', Tahoma, Verdana, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -451,43 +422,37 @@ p {
 }
 h1 {
   color: #000;
-
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
 }
 h2 {
   color: #000;
-
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 a {
   text-decoration: none;
-
   color: #326480;
 }
 /* BLOCKS */
 /* header */
 .main-header {
   margin-top: 16px;
-
   border-top: 1px solid #326480;
   border-bottom: 1px solid #326480;
   background-color: #fafafa;
 }
 .header-inner {
-  display: flex;
-  flex-direction: row;
-
-  width: auto;
   min-width: 768px;
   max-width: 1200px;
   margin-right: 10px;
   margin-left: 10px;
-
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  width: auto;
 }
 @media (min-width: 768px) {
   .header-inner {
@@ -500,7 +465,6 @@ a {
 .header-inner__logo {
   padding-top: 10px;
   padding-bottom: 10px;
-
   flex-basis: 200px;
 }
 .header-inner__content {
@@ -509,13 +473,11 @@ a {
 .header-inner__row1 {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 .header-inner__row2 {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 .header-inner__title {
@@ -523,17 +485,14 @@ a {
 }
 .header-inner__title--name {
   margin-top: 10px;
-
   font-size: 24px;
 }
 .header-inner__title--subname {
-  padding-bottom: 10px;
-
   font-size: 18px;
+  padding-bottom: 10px;
 }
 .header-inner__link {
   color: #000;
-
   font-size: 26px;
   font-weight: normal;
   line-height: 1.3em;
@@ -541,15 +500,12 @@ a {
 .header-inner__row3 {
   display: flex;
   flex-direction: column;
-
-  text-align: right;
-
   justify-content: space-between;
   align-items: flex-end;
+  text-align: right;
 }
 .header-inner__ftvi {
   padding-top: 15px;
-
   text-align: right;
 }
 .header-inner__ftvi a {
@@ -558,11 +514,9 @@ a {
 /* @import "blocks/header-title.less"; */
 .menu-horizontal--top-left {
   float: left;
-
-  text-align: left;
-
   flex-basis: 55%;
   flex-grow: 1;
+  text-align: left;
 }
 .menu-horizontal--buttom-right {
   /* position: absolute; */
@@ -570,26 +524,21 @@ a {
   bottom: 0;
 }
 .menu-horizontal__list {
-  margin: 0;
   margin-right: 4px;
   margin-left: -7px;
+  margin: 0;
   padding: 0;
-
   list-style: none;
 }
 .menu-horizontal__item {
   display: inline-block;
-
   margin-right: -4px;
 }
 .menu-horizontal__item a {
   display: block;
-
   margin-left: -1px;
   padding: 5px 7px;
-
   border-left: 1px solid #326480;
-
   font-size: 16px;
 }
 .menu-horizontal__item a:hover {
@@ -601,15 +550,12 @@ a {
 }
 .site-search {
   text-align: right;
-
   border-bottom: 1px solid #326480;
 }
 .site-search__form {
   position: relative;
-
   min-width: 250px;
   margin: 0 auto;
-
   background: #f5f8f9;
 }
 .site-search__form button,
@@ -627,39 +573,32 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-
   width: 32px;
   height: 32px;
-
   cursor: pointer;
 }
 .site-search__form button:before {
   content: "\f002";
-
   color: #326480;
-
   font-family: FontAwesome;
   font-size: 16px;
 }
 /* бегущая строка */
 .main-marque {
   width: 100%;
-  margin-bottom: 10px;
   padding-top: 8px;
   padding-bottom: 4px;
-
   color: #800;
   border-bottom: 1px solid #326480;
+  margin-bottom: 10px;
 }
 /* main content */
 .main-content {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
-
-  width: auto;
-  padding-top: 10px;
-
   justify-content: space-between;
+  width: auto;
 }
 @media (min-width: 768px) {
   .main-content {
@@ -675,7 +614,6 @@ a {
 .column--middle {
   margin-right: 20px;
   margin-left: 20px;
-
   flex-grow: 1;
 }
 .column--left-footer {
@@ -689,13 +627,10 @@ a {
 }
 .menu-vertical__item a {
   display: block;
-
   padding: 5px 10px;
-
   color: #326480;
   border-bottom: 1px solid #326480;
   background-color: #f5f8f9;
-
   font-size: 16px;
 }
 .menu-vertical__item a:hover {
@@ -706,12 +641,11 @@ a {
   background-color: #326480;
 }
 .menu-vertical__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
+  /* margin-top: 10px; */
   text-align: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .menu-vertical__list.submenu a {
   color: #326480;
@@ -722,12 +656,10 @@ a {
 }
 .main-slider {
   position: relative;
-
   width: 175px;
   height: 88px;
   margin: 0 auto;
   margin-bottom: 60px;
-
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -747,24 +679,19 @@ a {
 }
 .main-slider label {
   position: relative;
-
   display: inline-block;
-
   width: 8px;
   height: 8px;
   margin: 25px 10px 0 10px;
-
   cursor: pointer;
   -webkit-transition: background ease-in-out 0.5s;
   -moz-transition: background ease-in-out 0.5s;
   -o-transition: background ease-in-out 0.5s;
   transition: background ease-in-out 0.5s;
   vertical-align: top;
-
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-
   -o-border-radius: 50%;
 }
 #slide1.active ~ .main-slider__controls label:nth-of-type(1),
@@ -779,42 +706,31 @@ a {
   position: absolute;
   top: -4px;
   left: -4px;
-
   display: block;
-
   width: 12px;
   height: 12px;
-
   content: " ";
-
   border: 2px solid #326480;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-
   -o-border-radius: 50%;
 }
 .main-slider__content {
   position: relative;
-
   overflow: hidden;
-
   width: inherit;
   height: inherit;
-
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
   -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .main-slider__item {
   position: absolute;
   z-index: 10;
-
   width: inherit;
   height: inherit;
-
   -webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
   -moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
   -o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
@@ -823,7 +739,6 @@ a {
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
   transform: scale(1.5);
-
   opacity: 0;
   background-size: cover;
 }
@@ -832,10 +747,8 @@ a {
   z-index: 11;
   bottom: 0;
   left: 0;
-
   width: inherit;
   height: inherit;
-
   background-color: transparent;
 }
 .main-slider__link2 {
@@ -843,11 +756,9 @@ a {
   z-index: 11;
   bottom: 0;
   left: 0;
-
   width: inherit;
   height: 30px;
   padding-top: 15px;
-
   color: #fff;
   /* background-color: rgba(32,32,32,.3); */
   background-color: rgba(50, 100, 128, 0.5);
@@ -858,30 +769,31 @@ a {
 #slide4.active ~ .main-slider__content > .main-slider__item--4,
 #slide5.active ~ .main-slider__content > .main-slider__item--5 {
   z-index: 20;
-
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);
   transform: scale(1);
-
   opacity: 1;
 }
 .content-inner {
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 .content-block {
   position: relative;
   /*  float: left; */
-
   min-height: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
-
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
   border-top: 1px solid #326480;
   border-bottom: 1px solid #326480;
+}
+.content-block article {
+  margin-bottom: 15px;
 }
 .content-block--full {
   width: 100%;
@@ -898,20 +810,16 @@ a {
   position: absolute;
   top: -15px;
   left: 20px;
-
   padding: 5px 10px;
-
   background-color: #fff;
 }
 /* widget (in column) */
 .widget-area {
   margin-bottom: 10px;
-
   text-align: center;
 }
 .widget-area a {
   display: block;
-
   box-sizing: border-box;
   width: 100%;
   padding: 15px 10px;
@@ -939,7 +847,6 @@ a {
   /* position: relative; */
   width: 100%;
   margin-top: 16px;
-
   border-top: 1px solid #326480;
   background-color: #fafafa;
   /* .flex-row-between(); */
@@ -948,23 +855,17 @@ a {
 .main-footer__map {
   box-sizing: border-box;
   min-height: 500px;
-
-  background: #fafafa url("./img/map.png") no-repeat 50% 100%;
+  background: #fafafa url("../img/map.png") no-repeat 50% 100%;
 }
 .footer-inner {
   position: relative;
-
-  display: flex;
-  flex-direction: row;
-
   width: 100%;
   min-height: 140px;
   margin-top: -140px;
-
   text-transform: none;
-
   background-color: rgba(255, 255, 255, 0.8);
-
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .footer-inner a:hover {
@@ -973,14 +874,12 @@ a {
 .footer-inner__address {
   margin-left: 20px;
   padding-top: 10px;
-
   text-align: left;
 }
 .footer-inner__metrika {
   margin-left: 20px;
-  padding-top: 10px;
-
   text-align: left;
+  padding-top: 10px;
 }
 .footer-inner__metrika a:hover {
   border-bottom: none;
@@ -988,23 +887,19 @@ a {
 .footer-inner__nav {
   margin: 0;
   padding: 0;
-
   list-style: none;
-
   text-transform: uppercase;
 }
 .footer-inner__nav li {
   padding-top: 10px;
 }
 .footer-inner__rights {
+  text-align: right;
   margin-right: 20px;
   padding-top: 10px;
-
-  text-align: right;
 }
 .footer-inner__autor {
-  margin-right: 20px;
   padding-top: 10px;
-
   text-align: right;
+  margin-right: 20px;
 }
