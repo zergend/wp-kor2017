@@ -1,0 +1,50 @@
+.footer-inner {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+  margin-top: -140px;
+  text-transform: none;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  & a:hover {
+    .link-hover();
+  }
+  .flex-row-between();
+
+  &__address {
+    margin-left: 20px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  &__metrika {
+    margin-left: 20px;
+    text-align: left;
+    padding-top: 10px;
+
+    & a:hover {
+      border-bottom: none;
+    }
+  }
+
+  &__nav {
+    .clear-list-style ();
+    text-transform: uppercase;
+
+    & li {
+      padding-top: 10px;
+    }
+  }
+
+  &__rights {
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 10px;
+  }
+
+  &__autor {
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 20px;
+  }
+}

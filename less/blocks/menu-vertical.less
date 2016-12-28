@@ -1,0 +1,45 @@
+.menu-vertical {
+  &__item {
+    &.menu-item-has-children {
+      /* добавить стрелочку справа */
+    }
+
+    & a {
+      display: block;
+
+      padding: 5px 10px;
+
+      color: @dark-blue-grey;
+      border-bottom: 1px solid @dark-blue-grey;
+      background-color: @light-blue-grey;
+
+      font-size: 16px;
+
+      &:hover {
+        background-color: @blue-grey;
+      }
+    }
+
+    &.current-menu-item a {
+      color: #fff;
+      background-color: @dark-blue-grey;
+    }
+  }
+
+  &__list {
+    /* margin-top: 10px; */
+
+    text-align: left;
+
+    .clear-list-style ();
+
+    &.submenu a {
+      color: @dark-blue-grey;
+      background-color: @light-blue-grey;
+
+      &:hover {
+        background-color: @blue-grey;
+      }
+    }
+  }
+}

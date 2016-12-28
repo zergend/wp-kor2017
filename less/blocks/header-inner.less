@@ -1,0 +1,64 @@
+.header-inner {
+  min-width: 768px;
+  max-width: 1200px;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  .flex-row-between();
+  .container-fluid();
+
+  &__logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-basis: 200px;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__row1 {
+    .flex-row-between();
+  }
+
+  &__row2 {
+    .flex-row-between();
+  }
+
+  &__title {
+    text-align: left;
+
+    &--name {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    &--subname {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.3em;
+  }
+
+  &__row3 {
+    .flex-column-between-end();
+    text-align: right;
+  }
+
+  &__ftvi {
+    padding-top: 15px;
+    text-align: right;
+
+    & a {
+      color: @dark-blue-grey;
+    }
+  }
+
+
+}

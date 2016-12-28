@@ -1,0 +1,36 @@
+.content-block {
+  position: relative;
+/*  float: left; */
+
+  min-height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  border-top: 1px solid @dark-blue-grey;
+  border-bottom: 1px solid @dark-blue-grey;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--helf {
+    flex-basis: 49%;
+
+  }
+
+  &--alert {
+    color: @dark-red;
+    border-top: 1px solid @dark-red;
+    border-bottom: 1px solid @dark-red;
+  }
+
+  &__label {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+
+    padding: 5px 10px;
+
+    background-color: #fff;
+  }
+}
