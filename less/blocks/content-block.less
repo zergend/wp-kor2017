@@ -1,12 +1,11 @@
 .content-block {
   position: relative;
-/*  float: left; */
 
   min-height: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+
 
   text-align: left;
 
@@ -14,7 +13,17 @@
   border-bottom: 1px solid @dark-blue-grey;
 
   & article {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-transform: none;
+
+    & h2 {
+        font-weight: normal;
+      }
+
+
+    & a {
+      /* text-decoration: none; */
+    }
   }
 
   &--full {

@@ -782,18 +782,23 @@ a {
 }
 .content-block {
   position: relative;
-  /*  float: left; */
   min-height: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 25px;
   text-align: left;
   border-top: 1px solid #326480;
   border-bottom: 1px solid #326480;
 }
 .content-block article {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+.content-block article h2 {
+  font-weight: normal;
+}
+.content-block article a {
+  /* text-decoration: none; */
 }
 .content-block--full {
   width: 100%;

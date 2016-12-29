@@ -49,6 +49,7 @@
 
     <div class="content-block  content-block--full  content-block--sticky content-block--alert">
       <div class="content-block__label">Обратите внимание!</div>
+
       <?php
         $args = array(
         	'numberposts' => 5,
@@ -62,14 +63,28 @@
         get_template_part( 'template-parts/content', 'title' );
       }
 
-      wp_reset_postdata(); // сброс
+      wp_reset_query(); // сброс
     ?>
     </div>
 
     <div class="content-inner">
       <div class="content-block  content-block--helf  content-block--anounce">
         <div class="content-block__label">Объявления</div>
+        <?php
+          $args = array(
+          	'numberposts' => 5,
+          	'category'    => 13,
+          );
 
+        $posts = get_posts( $args );
+
+        foreach($posts as $post){ setup_postdata($post);
+          the_post();
+          get_template_part( 'template-parts/content', 'title' );
+        }
+
+        wp_reset_query(); // сброс
+      ?>
       </div>
       <div class="content-block  content-block--helf  content-block--news">
         <div class="content-block__label">Новости</div>
