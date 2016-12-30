@@ -6,24 +6,24 @@
   margin-bottom: 15px;
   padding-top: 25px;
 
-
   text-align: left;
 
+  color: @dark-blue-grey;
   border-top: 1px solid @dark-blue-grey;
   border-bottom: 1px solid @dark-blue-grey;
 
+  & a:hover {
+    border-bottom: 1px dotted;
+  }
+
   & article {
     margin-bottom: 20px;
+
     text-transform: none;
 
     & h2 {
         font-weight: normal;
       }
-
-
-    & a {
-      /* text-decoration: none; */
-    }
   }
 
   &--full {
@@ -32,11 +32,12 @@
 
   &--helf {
     flex-basis: 49%;
-
+    & h2 {
+      font-size: 18px;
+    }
   }
 
   &--alert {
-    color: @dark-red;
     border-top: 1px solid @dark-red;
     border-bottom: 1px solid @dark-red;
 
@@ -53,5 +54,9 @@
     padding: 5px 10px;
 
     background-color: #fff;
+
+    &--alert {
+      color: @dark-red;
+    }
   }
 }

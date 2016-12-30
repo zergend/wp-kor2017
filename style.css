@@ -612,6 +612,7 @@ a {
   flex-basis: 200px;
 }
 .column--middle {
+  min-width: 760px;
   margin-right: 20px;
   margin-left: 20px;
   flex-grow: 1;
@@ -787,8 +788,12 @@ a {
   margin-bottom: 15px;
   padding-top: 25px;
   text-align: left;
+  color: #326480;
   border-top: 1px solid #326480;
   border-bottom: 1px solid #326480;
+}
+.content-block a:hover {
+  border-bottom: 1px dotted;
 }
 .content-block article {
   margin-bottom: 20px;
@@ -797,17 +802,16 @@ a {
 .content-block article h2 {
   font-weight: normal;
 }
-.content-block article a {
-  /* text-decoration: none; */
-}
 .content-block--full {
   width: 100%;
 }
 .content-block--helf {
   flex-basis: 49%;
 }
+.content-block--helf h2 {
+  font-size: 18px;
+}
 .content-block--alert {
-  color: #cc0000;
   border-top: 1px solid #cc0000;
   border-bottom: 1px solid #cc0000;
 }
@@ -820,6 +824,9 @@ a {
   left: 20px;
   padding: 5px 10px;
   background-color: #fff;
+}
+.content-block__label--alert {
+  color: #cc0000;
 }
 /* widget (in column) */
 .widget-area {
@@ -910,4 +917,33 @@ a {
   padding-top: 10px;
   text-align: right;
   margin-right: 20px;
+}
+/* wordpress blocks */
+.post .entry-header {
+  margin-bottom: 15px;
+}
+.post h1,
+.post h1,
+.post h1,
+.post h1,
+.post h1,
+.post h1 {
+  margin-bottom: 10px;
+}
+.post p {
+  margin-bottom: 15px;
+  text-align: left;
+  text-indent: 2em;
+  text-transform: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+.post p .aligncenter {
+  text-align: center;
+}
+.archive__page-header {
+  margin-bottom: 15px;
+}
+.archive__page-header h1 {
+  font-size: 26px;
 }

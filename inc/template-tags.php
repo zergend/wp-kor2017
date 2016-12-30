@@ -26,7 +26,7 @@ function kor622017_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'kor622017' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-	echo '<span class="posted-on">' . $time_string . ', </span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $time_string . '</span>'; // WPCS: XSS OK.
 }
 endif;
 if ( ! function_exists( 'kor622017_entry_footer' ) ) :

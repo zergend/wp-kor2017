@@ -13,46 +13,42 @@
     <?php get_template_part( 'template-parts/content', 'main-slider' ); ?>
 
     <div class="content-block  content-block--full  content-block--sticky content-block--alert">
-      <div class="content-block__label">Обратите внимание!</div>
+      <div class="content-block__label content-block__label--alert">Обратите внимание!</div>
 
       <?php
-        $args = array(
-        	'numberposts' => 5,
-        	'category'    => 10
-        );
-
-      $posts = get_posts( $args );
-
-      foreach($posts as $post){ setup_postdata($post);
-        the_post();
-        get_template_part( 'template-parts/content', 'title' );
-      }
-
+      query_posts('cat=10&posts_per_page=5');
+        while (have_posts()) : the_post();
+          get_template_part( 'template-parts/content', 'sticky' );
+        endwhile;
       wp_reset_query(); // сброс
-    ?>
+      ?>
+
     </div>
 
     <div class="content-inner">
       <div class="content-block  content-block--helf  content-block--anounce">
         <div class="content-block__label">Объявления</div>
+
         <?php
-          $args = array(
-          	'numberposts' => 5,
-          	'category'    => 13
-          );
+          query_posts('cat=13&posts_per_page=5');
+            while (have_posts()) : the_post();
+              get_template_part( 'template-parts/content', 'title' );
+            endwhile;
+          wp_reset_query(); // сброс
+        ?>
 
-        $posts = get_posts( $args );
-
-        foreach($posts as $post){ setup_postdata($post);
-          the_post();
-          get_template_part( 'template-parts/content', 'title' );
-        }
-
-        wp_reset_query(); // сброс
-      ?>
       </div>
       <div class="content-block  content-block--helf  content-block--news">
         <div class="content-block__label">Новости</div>
+
+        <?php
+          query_posts('cat=11&posts_per_page=5');
+            while (have_posts()) : the_post();
+              get_template_part( 'template-parts/content', 'title' );
+            endwhile;
+          wp_reset_query(); // сброс
+        ?>
+
       </div>
     </div>
 
