@@ -49,11 +49,37 @@
 
     <div class="content-block  content-block--full  content-block--sticky content-block--alert">
       <div class="content-block__label">Обратите внимание!</div>
+      <?php	// НОВОСТИ школы
+				if ( have_posts() ) : // если имеются записи в блоге.
+				query_posts('cat=1&posts_per_page=10');   // указываем ID рубрики, которую необходимо вывести и количество постов.
+
+				while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
+				?>
+				<p><span class="postdate-tab"><?php the_time('d.m.Y') ?> | </span><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
+				<?php
+				endwhile;  // завершаем цикл.
+				endif;
+				/* Сбрасываем настройки цикла. Если ниже по коду будет идти еще один цикл, чтобы не было сбоя. */
+				wp_reset_query();
+				?>
     </div>
 
     <div class="content-inner">
       <div class="content-block  content-block--helf  content-block--anounce">
         <div class="content-block__label">Объявления</div>
+        <?php	// НОВОСТИ школы
+				if ( have_posts() ) : // если имеются записи в блоге.
+				query_posts('cat=2&posts_per_page=10');   // указываем ID рубрики, которую необходимо вывести и количество постов.
+
+				while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
+				?>
+				<p><span class="postdate-tab"><?php the_time('d.m.Y') ?> | </span><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
+				<?php
+				endwhile;  // завершаем цикл.
+				endif;
+				/* Сбрасываем настройки цикла. Если ниже по коду будет идти еще один цикл, чтобы не было сбоя. */
+				wp_reset_query();
+				?>
 
       </div>
       <div class="content-block  content-block--helf  content-block--news">
@@ -63,6 +89,19 @@
 
     <div class="content-block  content-block--full  content-block__video-posts">
       <div class="content-block__label">Видео</div>
+      <?php	// НОВОСТИ школы
+				if ( have_posts() ) : // если имеются записи в блоге.
+				query_posts('cat=10&posts_per_page=10');   // указываем ID рубрики, которую необходимо вывести и количество постов.
+
+				while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
+				?>
+				<p><span class="postdate-tab"><?php the_time('d.m.Y') ?> | </span><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></p>
+				<?php
+				endwhile;  // завершаем цикл.
+				endif;
+				/* Сбрасываем настройки цикла. Если ниже по коду будет идти еще один цикл, чтобы не было сбоя. */
+				wp_reset_query();
+				?>
     </div>
 
     <div class="content-block  content-block--full  content-block__gallery">

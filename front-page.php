@@ -18,7 +18,7 @@
       <?php
         $args = array(
         	'numberposts' => 5,
-        	'category'    => 10,
+        	'category'    => 10
         );
 
       $posts = get_posts( $args );
@@ -38,7 +38,7 @@
         <?php
           $args = array(
           	'numberposts' => 5,
-          	'category'    => 13,
+          	'category'    => 13
           );
 
         $posts = get_posts( $args );
