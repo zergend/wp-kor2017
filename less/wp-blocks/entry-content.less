@@ -1,0 +1,33 @@
+.entry-content {
+  text-align: left;
+  text-transform: none;
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+
+  & .aligncenter {
+    text-align: center;
+  }
+
+  & p {
+    margin-bottom: 15px;
+
+    text-indent: 2em;
+  }
+
+  &__post {
+    .flex-row-between();
+  }
+
+  &__tmb {
+    flex-basis: 200px;
+
+    & a:hover {
+      border-bottom: none;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+}
