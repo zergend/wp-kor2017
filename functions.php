@@ -148,5 +148,18 @@ function disable_wp_emojis_in_tinymce( $plugins ) {
         return array();
     }
 }
+///////////////////////////////
+// подключаем jQuery
+//
+/* function my_scripts_method() {
+	// получаем версию jQuery
+	wp_enqueue_script( 'jquery' );
+	$wp_jquery_ver = $GLOBALS['wp_scripts']->registered['jquery']->ver; // для версий WP меньше 3.6 'jquery' меняем на 'jquery-core'
+	$jquery_ver = $wp_jquery_ver == '' ? '1.11.0' : $wp_jquery_ver;
 
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/'. $jquery_ver .'/jquery.min.js' );
+	wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts_method', 99 ); */
 ?>

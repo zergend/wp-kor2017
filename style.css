@@ -419,6 +419,7 @@ h2,
 h3,
 p {
   margin: 0;
+  margin-bottom: 10px;
 }
 h1 {
   color: #000;
@@ -937,11 +938,15 @@ img {
 .post h1 {
   margin-bottom: 10px;
 }
+.archive img {
+  max-width: 200px;
+}
 .archive a:hover {
   border-bottom: 1px dotted;
 }
 .archive article {
   margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #326480;
 }
 .archive__page-header {
@@ -975,11 +980,16 @@ img {
   justify-content: space-between;
 }
 .entry-content__tmb {
+  margin-right: 15px;
   flex-basis: 200px;
 }
 .entry-content__tmb a:hover {
   border-bottom: none;
 }
 .entry-content__text {
-  flex-grow: 1;
+  text-indent: 2em;
+  /* flex-grow: 1; */
+}
+.entry-content__text i {
+  text-indent: 0;
 }
