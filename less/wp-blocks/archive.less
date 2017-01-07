@@ -1,4 +1,9 @@
 .archive {
+  text-align: left;
+  text-transform: none;
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
   img {
     max-width: 200px;
   }
@@ -14,11 +19,65 @@
     border-bottom: 1px solid @dark-blue-grey;
   }
 
+  &__meta {
+    margin-bottom: 10px;
+
+    text-transform: none;
+
+    & a:hover {
+      border-bottom: 1px dotted;
+    }
+  }
+
+  & p {
+    margin-bottom: 15px;
+
+    text-indent: 2em;
+  }
+
   &__page-header {
     margin-bottom: 15px;
 
+    border-bottom: 1px solid @dark-blue-grey;
     & h1 {
       font-size: 26px;
+    }
+  }
+
+  &__entry-content {
+    .flex-row-between();
+  }
+
+  &__tmb {
+    margin-right: 15px;
+
+    flex-basis: 200px;
+    & a:hover {
+      border-bottom: none;
+    }
+  }
+
+  &__post {
+    flex-grow: 1;
+  }
+
+  &__text {
+    /* text-indent: 2em; */
+    & a:hover {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__entry-title {
+    text-transform: uppercase;
+
+    & a:hover {
+      border-bottom: none;
     }
   }
 }
