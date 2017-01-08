@@ -1042,3 +1042,6 @@ img {
 .entry-content__text i {
   text-indent: 0;
 }
+.fotorama {
+  margin-bottom: 15px;
+}
