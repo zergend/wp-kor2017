@@ -11,12 +11,12 @@
 	<div class="archive__entry-content">
 		<?php
 			$content = get_the_content();
+			$pattern = '/https?.+?\.(jpg|png|JPG)"/';
+			$i = preg_match_all($pattern, $content, $matches, PREG_PATTERN_ORDER);
 
-			$pattern = '/http.*jpg/';
-
-			if ( preg_match($pattern, $content, $matches) > 0) {
-				$large_img = array('_XL','_L','_S','_orig'); // для замены имени файла на yandex фотках
-				$img_tmb = '<img width="300" src="'. str_replace($large_img,'_M',$matches[0]) . '" alt="" class="archive__tmb-image" />';
+			if ( $i > 0) {
+				$large_img = array('_XL.jpg','_L.jpg','_S.jpg','_orig.jpg'); // для замены имени файла на yandex фотках
+				$img_tmb = '<img width="300" src="'. str_replace($large_img,'_M.jpg',$matches[0][0]) . '" alt="" class="archive__tmb-image" />';
 				} else {
 				$img_tmb = '';
 				}
@@ -56,15 +56,14 @@
 			<div class="archive__text">
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo (the_title_attribute('echo=0')); ?>">
 
-				<?php 				// первое n знаков в тексте
+				<?php 				// первые n знаков в тексте
 					$content = strip_tags($content);
 					$content = substr($content, 0, 300);
 					$content = rtrim($content, "!,.-");
 					$content = substr($content, 0, strrpos($content, ' '));
 					echo $content;
+					echo '...';
 				?>
-
-						<?php echo '...';?>
 					</a>
 			</div>
 		</div>

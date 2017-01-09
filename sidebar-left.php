@@ -1,4 +1,8 @@
   <div class="column  column--left">
+    <aside id="secondary" class="widget-area" role="complementary">
+    	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </aside><!-- #secondary -->
+
     <nav class="menu-vertical">
       <ul class="menu-vertical__list">
         <li class="menu-vertical__item  current-menu-item">

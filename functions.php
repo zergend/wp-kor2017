@@ -48,9 +48,18 @@ add_action( 'after_setup_theme', 'kor622017_setup' );
  */
 function kor622017_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'kor622017' ),
+		'name'          => esc_html__( 'Левая панель виджетов', 'kor622017' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'kor622017' ),
+		'description'   => esc_html__( 'Добавьте виджеты.', 'kor622017' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Правая панель виджетов', 'kor622017' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Добавьте виджеты.', 'kor622017' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

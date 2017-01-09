@@ -616,11 +616,17 @@ img {
 .column {
   flex-basis: 200px;
 }
+.column--left {
+  min-width: 200px;
+}
 .column--middle {
-  min-width: 760px;
+  max-width: 760px;
   margin-right: 20px;
   margin-left: 20px;
   flex-grow: 1;
+}
+.column--right {
+  min-width: 200px;
 }
 .column--left-footer {
   flex-basis: 30%;
