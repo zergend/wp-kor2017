@@ -7,10 +7,13 @@
   .flex-row-between();
   .container-fluid();
 
+  & h1 {
+    margin-bottom: 0;
+  }
+
   &__logo {
     padding-top: 10px;
-    padding-bottom: 10px;
-    flex-basis: 200px;
+    /* padding-bottom: 10px; */    flex-basis: 200px;
   }
 
   &__content {
@@ -29,36 +32,39 @@
     text-align: left;
 
     &--name {
-      margin-top: 10px;
+      /* margin-top: 10px; */
       font-size: 24px;
     }
 
     &--subname {
-      font-size: 18px;
       padding-bottom: 10px;
+
+      font-size: 18px;
     }
   }
 
   &__link {
     color: #000;
+
     font-size: 26px;
     font-weight: normal;
     line-height: 1.3em;
   }
 
   &__row3 {
-    .flex-column-between-end();
     text-align: right;
+
+    .flex-column-between-end();
   }
 
   &__ftvi {
-    padding-top: 15px;
+    padding-top: 20px;
+
     text-align: right;
 
     & a {
       color: @dark-blue-grey;
     }
   }
-
 
 }

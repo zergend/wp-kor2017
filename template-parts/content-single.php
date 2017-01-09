@@ -58,6 +58,7 @@
 			$pattern = '/<img.+\/>/';
 			$content = get_the_content();
 			$content = apply_filters('the_content', $content);
+			$content = strip_tags($content, '<p><a><strong><b>');
 			echo preg_replace($pattern, '', $content);
 		?>
 	</div><!-- .entry-content -->

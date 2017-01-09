@@ -467,9 +467,12 @@ img {
     margin: 0 auto;
   }
 }
+.header-inner h1 {
+  margin-bottom: 0;
+}
 .header-inner__logo {
   padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   flex-basis: 200px;
 }
 .header-inner__content {
@@ -489,12 +492,12 @@ img {
   text-align: left;
 }
 .header-inner__title--name {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-size: 24px;
 }
 .header-inner__title--subname {
-  font-size: 18px;
   padding-bottom: 10px;
+  font-size: 18px;
 }
 .header-inner__link {
   color: #000;
@@ -503,14 +506,14 @@ img {
   line-height: 1.3em;
 }
 .header-inner__row3 {
+  text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  text-align: right;
 }
 .header-inner__ftvi {
-  padding-top: 15px;
+  padding-top: 20px;
   text-align: right;
 }
 .header-inner__ftvi a {
@@ -1009,6 +1012,27 @@ img {
 }
 .archive__entry-title a:hover {
   border-bottom: none;
+}
+.error-404 ul {
+  padding-left: 0;
+}
+.error-404 li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.error-404 p {
+  text-indent: 0;
+  font-style: italic;
+}
+.error-404__search {
+  margin-bottom: 15px;
+}
+.error-404__archives {
+  margin-bottom: 15px;
+}
+.error-404__tags {
+  margin-bottom: 15px;
 }
 .entry-meta {
   text-transform: none;
