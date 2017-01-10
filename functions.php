@@ -28,7 +28,7 @@ function kor622017_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in ... location.
 	register_nav_menus( array(
 		'header-menu' => 'Меню в шапке',
 		'sidebar-menu' => 'Меню в боковой колонке'
@@ -38,6 +38,44 @@ function kor622017_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter($var){
+	if( is_array($var) ){
+		// сюда попадает массив со всеми классами li элемента
+		// зададим массив, в который будем складировать нужные нам классы, а также сразу зададим, какой будет класс у всех li элементов
+		$all_class_li = array('menu-vertical__item');
+		foreach($var as $class_li){
+			if( $class_li == 'current-menu-item' ){
+				$all_class_li[] = 'menu-vertical__item--current'; // класс активного меню
+			}
+		}
+		return $all_class_li;
+		}else{
+			// сюда попадает ID li элемента, мы его просто "затираем" пустой строкой
+			return '';
+		}
+	}
+
+add_filter('wp_nav_menu_objects', 'css_for_nav_parrent');
+function css_for_nav_parrent( $items ){
+	foreach( $items as $item ){
+		if( __nav_hasSub( $item->ID, $items ) )
+			$item->classes[] = 'menu-vertical__item--parent'; // все элементы поля "classes" меню, будут совмещены и выведены в атрибут class HTML тега <li>
+	}
+	return $items;
+}
+function __nav_hasSub( $item_id, $items ){
+	foreach( $items as $item ){
+		if( $item->menu_item_parent && $item->menu_item_parent == $item_id )
+			return true;
+	}
+	return false;
+}
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'kor622017_setup' );

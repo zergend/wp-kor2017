@@ -638,7 +638,7 @@ img {
   flex-basis: 30%;
 }
 .menu-vertical__item.menu-item-has-children {
-  /* добавить стрелочку справа */
+  /* добавить стрелочку справа ? */
 }
 .menu-vertical__item a {
   display: block;
@@ -650,8 +650,9 @@ img {
 }
 .menu-vertical__item a:hover {
   background-color: rgba(50, 100, 128, 0.2);
+  color: #326480;
 }
-.menu-vertical__item.current-menu-item a {
+.menu-vertical__item--current a {
   color: #fff;
   background-color: #326480;
 }
