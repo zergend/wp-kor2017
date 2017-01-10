@@ -637,8 +637,18 @@ img {
 .column--right-footer {
   flex-basis: 30%;
 }
+.menu-vertical__item {
+  position: relative;
+}
 .menu-vertical__item.menu-item-has-children {
+  border-right: 1px dashed #326480;
+}
+.menu-vertical__item.menu-item-has-children > a:after {
+  /* content: "\00a0\25BC"; */
   /* добавить стрелочку справа ? */
+}
+.menu-vertical__item:hover > ul.sub-menu {
+  display: block;
 }
 .menu-vertical__item a {
   display: block;
@@ -649,10 +659,10 @@ img {
   font-size: 16px;
 }
 .menu-vertical__item a:hover {
-  background-color: rgba(50, 100, 128, 0.2);
   color: #326480;
+  background-color: #d6e0e6;
 }
-.menu-vertical__item--current a {
+.menu-vertical__item.current-menu-item a {
   color: #fff;
   background-color: #326480;
 }
@@ -663,12 +673,21 @@ img {
   padding: 0;
   list-style: none;
 }
-.menu-vertical__list.submenu a {
+.menu-vertical__list.sub-menu {
+  position: absolute;
+  z-index: 50;
+  top: 10px;
+  left: 185px;
+  display: none;
+  width: 220px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+.menu-vertical__list.sub-menu a {
   color: #326480;
   background-color: #f5f8f9;
 }
-.menu-vertical__list.submenu a:hover {
-  background-color: rgba(50, 100, 128, 0.2);
+.menu-vertical__list.sub-menu a:hover {
+  background-color: #d6e0e6;
 }
 .main-slider {
   position: relative;

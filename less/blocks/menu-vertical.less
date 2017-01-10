@@ -1,7 +1,18 @@
 .menu-vertical {
   &__item {
+    position:relative;
+
     &.menu-item-has-children {
+      border-right: 1px dashed @dark-blue-grey;
+    }
+
+    &.menu-item-has-children > a:after {
+      /* content: "\00a0\25BC"; */
       /* добавить стрелочку справа ? */
+    }
+
+    &:hover > ul.sub-menu {
+      display: block;
     }
 
     & a {
@@ -16,12 +27,12 @@
       font-size: 16px;
 
       &:hover {
+        color: @dark-blue-grey;
         background-color: @blue-grey;
-        color: @dark-blue-grey;
       }
     }
 
-    &--current a {
+    &.current-menu-item a {
       color: #fff;
       background-color: @dark-blue-grey;
     }
@@ -29,12 +40,24 @@
 
   &__list {
     /* margin-top: 10px; */
-
     text-align: left;
 
     .clear-list-style ();
 
-    &.submenu a {
+    &.sub-menu {
+      position:absolute;
+    	z-index:50;
+    	top:10px;
+    	left:185px;
+
+    	display: none;
+
+    	width:220px;
+
+      box-shadow: 0 0 7px rgba(0,0,0,0.5);
+    }
+
+    &.sub-menu a {
       color: @dark-blue-grey;
       background-color: @light-blue-grey;
 
