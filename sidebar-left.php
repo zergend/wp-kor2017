@@ -1,6 +1,27 @@
   <div class="column  column--left">
-    <aside id="secondary" class="widget-area" role="complementary">
-    	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+    <aside id="first-widget-area" class="widget-area" role="complementary">
+      <?php
+      wp_nav_menu( array( // меню
+      	'theme_location'  => 'sidebar-menu',
+      	'menu'            => '',
+      	'container'       => 'nav',
+      	'container_class' => 'menu-vertical',
+      	'container_id'    => '',
+      	'menu_class'      => 'menu-vertical__list',
+      	'menu_id'         => '',
+      	'echo'            => true,
+      	'fallback_cb'     => 'wp_page_menu',
+      	'before'          => '',
+      	'after'           => '',
+      	'link_before'     => '',
+      	'link_after'      => '',
+      	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      	'depth'           => 0,
+      	'walker'          => '',
+      ) );
+
+      // сайдбар
+    	dynamic_sidebar( 'sidebar-1' ); ?>
     </aside><!-- #secondary -->
 
     <nav class="menu-vertical">

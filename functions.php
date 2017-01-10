@@ -30,7 +30,8 @@ function kor622017_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'kor622017' ),
+		'header-menu' => 'Меню в шапке',
+		'sidebar-menu' => 'Меню в боковой колонке'
 	) );
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'kor622017_custom_background_args', array(
