@@ -117,11 +117,13 @@
 
     width: inherit;
     height: inherit;
-  
+
     background-color: transparent;
   }
 
   &__link2 {
+    white-space: nowrap;
+    overflow: hidden;
     position: absolute;
     z-index: 11;
     bottom: 0;
@@ -130,10 +132,26 @@
     width: inherit;
     height: 30px;
     padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     color: #fff;
-    /* background-color: rgba(32,32,32,.3); */
     background-color: rgba(50, 100, 128, 0.5);
+
+    &::after {
+    content: ''; /* Выводим элемент */
+    position: absolute; /* Абсолютное позиционирование */
+    right: 0;
+    top: 0; /* Положение элемента */
+    width: 50px; /* Ширина градиента*/
+    height: 100%; /* Высота родителя */
+    /* Градиент */
+    background: -moz-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -webkit-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -o-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -ms-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: linear-gradient(to right, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+   }
   }
 
   #slide1.active ~ &__content > &__item--1,

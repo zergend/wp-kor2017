@@ -81,10 +81,13 @@ function __nav_hasSub( $item_id, $items ){
 endif;
 add_action( 'after_setup_theme', 'kor622017_setup' );
 
+// включение поддержки форматов постов
+add_theme_support( 'post-formats', array('aside', 'gallery', 'image', 'video') );
+
 //// walker start
 
 // свой класс построения меню:
-class magomra_walker_nav_menu extends Walker_Nav_Menu {
+class walker_vertical_nav_menu extends Walker_Nav_Menu {
 
 // add classes to ul sub-menus
 function start_lvl( &$output, $depth ) {
