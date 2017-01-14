@@ -26,40 +26,17 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="fotorama" data-loop="true" data-allowfullscreen="true" data-nav="thumbs"
-		data-width="auto"
-    data-ratio="800/600"
-    data-minwidth="200"
-    data-maxwidth="760"
-    data-minheight="150"
-    data-maxheight="100%">
-
-		<?php
-		$content = get_the_content();
-		$pattern = '/https?.+?\.(jpg|png|JPG)/';
-
-		$i = preg_match_all($pattern, $content, $matches, PREG_PATTERN_ORDER);
-		if ( $i > 0 ) {
-			$large_img = array('_XL.jpg','_L.jpg','_S.jpg','_M.jpg'); // для замены имени файла на yandex фотках
-				for ( $j = 0; $j <= $i - 1; $j++ ) {
-					$img_fotorama[$j] = '<img src="'. str_replace($large_img,'_orig.jpg',$matches[0][$j]) . '" alt="" class="fotorama__image" />';
-					echo $img_fotorama[$j];
-				}
-			} else {
-			$img_tmb = '';
-			}
-		?>
-	</div>	<!-- .fotorama -->
-
 	<div class="entry-content">
 		<?php
-			//$patterns = array();
-			//$patterns[0] = '/<p><img.*\/p>/';
-			$pattern = '/<img.+\/>/';
-			$content = get_the_content();
-			$content = apply_filters('the_content', $content);
-			$content = strip_tags($content, '<p><a><strong><b>');
-			echo preg_replace($pattern, '', $content);
+			the_content( sprintf(
+				/* translators: %s: Name of current post. */
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'kor622017' ), array( 'span' => array( 'class' => array() ) ) ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kor622017' ),
+				'after'  => '</div>',
+			) );
 		?>
 	</div><!-- .entry-content -->
 
