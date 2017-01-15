@@ -691,16 +691,16 @@ img {
 }
 .main-slider {
   position: relative;
-  width: 175px;
-  height: 88px;
+  width: 200px;
+  height: 100px;
   margin: 0 auto;
   margin-bottom: 60px;
   text-align: center;
 }
 @media (min-width: 768px) {
   .main-slider {
-    width: 350px;
-    height: 175px;
+    width: 400px;
+    height: 200px;
   }
 }
 @media (min-width: 1280px) {
@@ -787,32 +787,32 @@ img {
   background-color: transparent;
 }
 .main-slider__link2 {
-  white-space: nowrap;
-  overflow: hidden;
   position: absolute;
   z-index: 11;
   bottom: 0;
   left: 0;
+  overflow: hidden;
   width: inherit;
   height: 30px;
   padding-top: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  white-space: nowrap;
   color: #fff;
   background-color: rgba(50, 100, 128, 0.5);
 }
 .main-slider__link2::after {
-  content: '';
-  /* Выводим элемент */
   position: absolute;
   /* Абсолютное позиционирование */
-  right: 0;
   top: 0;
   /* Положение элемента */
-  width: 70px;
+  right: 0;
+  width: 50px;
   /* Ширина градиента*/
   height: 100%;
   /* Высота родителя */
+  content: '';
+  /* Выводим элемент */
   /* Градиент */
   background: -moz-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
   background: -webkit-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
@@ -1095,6 +1095,9 @@ img {
   margin-bottom: 15px;
   text-indent: 2em;
 }
+.entry-content__single-post p > img:first-child {
+  margin-left: -2em;
+}
 .entry-content__post {
   display: flex;
   flex-direction: row;
@@ -1115,5 +1118,22 @@ img {
   text-indent: 0;
 }
 .fotorama {
+  width: 98%;
+  height: auto;
+  /*  min-width: 200px;
+  max-width: 760px; */
+  margin: 0 auto;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .fotorama {
+    width: 98%;
+    height: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .fotorama {
+    width: 760px;
+    height: auto;
+  }
 }

@@ -1,17 +1,16 @@
 .main-slider {
   position: relative;
 
-  width: 175px;
-  height: 88px;
-  margin: 0 auto;
+  width: 200px;
+  height: 100px;
   margin: 0 auto;
   margin-bottom: 60px;
 
   text-align: center;
 
   @media @tablet-widths {
-    width: 350px;
-    height: 175px;
+    width: 400px;
+    height: 200px;
   }
   @media @desktop-widths {
     width: 700px;
@@ -122,30 +121,35 @@
   }
 
   &__link2 {
-    white-space: nowrap;
-    overflow: hidden;
     position: absolute;
     z-index: 11;
     bottom: 0;
     left: 0;
 
+    overflow: hidden;
+
     width: inherit;
     height: 30px;
     padding-top: 15px;
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
+
+    white-space: nowrap;
 
     color: #fff;
     background-color: rgba(50, 100, 128, 0.5);
 
     &::after {
-    content: ''; /* Выводим элемент */
     position: absolute; /* Абсолютное позиционирование */
-    right: 0;
     top: 0; /* Положение элемента */
+    right: 0;
+
     width: 50px; /* Ширина градиента*/
     height: 100%; /* Высота родителя */
+
+    content: ''; /* Выводим элемент */
     /* Градиент */
+
     background: -moz-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
     background: -webkit-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
     background: -o-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
