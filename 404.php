@@ -16,7 +16,7 @@
   			get_search_form();
       ?>
     </div>
-    <p><?php esc_html_e( 'Вы можете использовать другие варианты для поиска нужной информации:', '_s' ); ?></p>
+    <p><strong><?php esc_html_e( 'Кроме того, Вы можете использовать другие варианты для поиска нужной информации:', '_s' ); ?></strong></p>
     <div class="error-404__recent_posts">
       <?php
   			the_widget( 'WP_Widget_Recent_Posts' );
@@ -38,10 +38,13 @@
 			</ul>
 		</div><!-- .widget -->
     <div class="error-404__archives">
+			<h2 class="error-404__title"><?php esc_html_e( 'Архив записей', '_s' ); ?></h2>
   		<?php
   			/* translators: %1$s: smiley */
-  			$archive_content = '<p>' . sprintf( esc_html__( 'Попробуйте посмотреть архив записей по месяцам: %1$s', '_s' ), convert_smilies( ':)' ) ) . '</p>';
-  			the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+  			$archive_content = '<p>Архив записей по месяцам:</p>';
+  			the_widget( 'WP_Widget_Archives', array('title' => ' ','count' => true, 'dropdown' => true), "after_title=</h2>$archive_content" );
+
+				//the_widget( 'WP_Widget_Archives', array('title' => 'Архивы','count' => true, 'dropdown' => true) );
       ?>
     </div>
     <div class="error-404__tags">

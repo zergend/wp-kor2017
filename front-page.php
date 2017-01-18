@@ -16,7 +16,10 @@
       <div class="content-block__label content-block__label--alert">Обратите внимание!</div>
 
       <?php
-      query_posts('cat=10&posts_per_page=5');
+      $sticky = get_option('sticky_posts');
+      rsort($sticky);
+      $sticky = array_slice( $sticky, 0, 7);
+      query_posts( array( 'post__in' => $sticky, 'caller_get_posts' => 1 ) );
         while (have_posts()) : the_post();
           get_template_part( 'template-parts/content', 'sticky' );
         endwhile;

@@ -607,6 +607,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   width: auto;
+  flex-wrap: wrap;
 }
 @media (min-width: 768px) {
   .main-content {
@@ -627,6 +628,7 @@ img {
   margin-right: 20px;
   margin-left: 20px;
   flex-grow: 1;
+  /* flex-shrink: 10;  */
 }
 .column--right {
   min-width: 200px;
@@ -1054,6 +1056,9 @@ img {
 }
 .archive__entry-title a:hover {
   border-bottom: none;
+}
+.archive__entry-header {
+  text-align: right;
 }
 .error-404 ul {
   padding-left: 0;
