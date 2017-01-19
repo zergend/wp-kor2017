@@ -8,12 +8,18 @@
 
     box-sizing: border-box;
     width: 100%;
-    padding: 15px 10px;
+    padding: 10px;
+
+    /* default style text blocks */
+    color: @dark-blue-grey;
+    border: 1px solid @dark-blue-grey;
+    background-color: #fff;
   }
 
   & a.w--red {
     color: #fff;
     background-color: @dark-red;
+    border: none;
   }
 
   & a.w--red-line {
@@ -25,11 +31,36 @@
   & a.w--blue {
     color: #fff;
     background-color: @dark-blue-grey;
+    border: none;
   }
 
   & a.w--blue-line {
     color: @dark-blue-grey;
     border: 1px solid @dark-blue-grey;
+    background-color: #fff;
+  }
+
+  & a.w--black {
+    color: #fff;
+    background-color: #000;
+    border: none;
+  }
+
+  & a.w--black-line {
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+
+  & a.w--grey {
+    color: #fff;
+    background-color: #555;
+    border: none;
+  }
+
+  & a.w--grey-line {
+    color: #555;
+    border: 1px solid #555;
     background-color: #fff;
   }
 }

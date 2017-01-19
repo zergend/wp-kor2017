@@ -21,7 +21,7 @@
     ) );
     ?>
 
-    <aside id="first-widget-area" class="widget-area" role="complementary">
+    <aside id="first-widget-area" class="widget-area">
       <?php dynamic_sidebar( 'sidebar-1' ); ?>
     </aside><!-- #first -->
 
