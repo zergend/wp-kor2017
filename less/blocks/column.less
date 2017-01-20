@@ -1,19 +1,26 @@
 .column {
-  flex-basis: 200px;
-
-  &--left {
-    min-width: 200px;
+  flex-basis: 300px;
+  min-width: 200px;
+  @media @tablet-widths {
+    flex-basis: 200px;
   }
 
-  &--middle {    max-width: 760px;    margin-right: 20px;
+  @media @desktop-widths {
+    flex-basis: 200px;
+  }
+
+  &--middle {
+    max-width: 760px;    margin-right: 20px;
     margin-left: 20px;
 
     flex-grow: 1;
-    /* flex-shrink: 10;  */
-  }
+    @media @tablet-widths {
+      flex-basis: 400px;
+    }
 
-  &--right {
-    min-width: 200px;
+    @media @desktop-widths {
+      flex-basis: 760px;
+    }
   }
 
   &--left-footer {
