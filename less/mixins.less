@@ -19,12 +19,19 @@
 
 .container-fluid() {
   width: auto;
+  @media @mobile-widths-only {
+    margin: 0 10px;
+  }
   @media @tablet-widths {
-    width: 93.75%;
+    /* width: 93.75%; */
     max-width: 1200px;
     /* 1200 / .9375 =  1280 */
+    margin: 0 10px;
+  }
+  @media @desktop-widths {
     margin: 0 auto;
   }
+
 }
 
 .flex-row-between() {
