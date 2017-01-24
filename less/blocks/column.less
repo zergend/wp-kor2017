@@ -4,6 +4,7 @@
 
   @media @mobile-widths-only {
     flex-basis: 100%;
+    min-width: 300px;
   }
 
   /* @media @tablet-widths {
@@ -17,6 +18,7 @@
   &--middle {
     max-width: 760px;    flex-grow: 1;    @media @tablet-widths {
       flex-basis: 400px;
+      margin-right: 0;
       margin-left: 20px;
     }
 
@@ -24,6 +26,15 @@
       flex-basis: 760px;
       margin-right: 20px;
       margin-left: 20px;
+    }
+  }
+
+  &--right {
+    @media @tablet-widths {
+      margin-left: 10px;
+    }
+    @media @desktop-widths {
+      margin-left: 0;
     }
   }
 
