@@ -52,6 +52,9 @@
               <h1><a href="/" class="header-inner__link">Администрация муниципального образования —
               <br>Кораблинский муниципальный район Рязанской области</a></h1>
             </div>
+            <div class="header-inner__title--name-tablet">
+              <h1><a href="/" class="header-inner__link">Администрация Кораблинского района</a></h1>
+            </div>
             <div class="header-inner__title--subname">
               Официальный сайт
             </div>

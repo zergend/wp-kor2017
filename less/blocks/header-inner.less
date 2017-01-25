@@ -1,5 +1,5 @@
 .header-inner {
-  min-width: 768px;
+  /* min-width: 768px; */
   max-width: 1200px;
   margin-right: 10px;
   margin-left: 10px;
@@ -13,8 +13,7 @@
 
   &__logo {
     padding-top: 10px;
-    /* padding-bottom: 10px; */    flex-basis: 200px;
-  }
+    flex-basis: 200px;  }
 
   &__content {
     flex-grow: 1;
@@ -22,6 +21,12 @@
 
   &__row1 {
     .flex-row-between();
+    @media @mobile-widths-only {
+      flex-wrap: wrap;
+    }
+    @media @tablet-widths {
+      flex-wrap: wrap;
+    }
   }
 
   &__row2 {
@@ -30,10 +35,16 @@
 
   &__title {
     text-align: left;
-
+    @media @mobile-widths-only {
+      display: none;
+    }
     &--name {
       /* margin-top: 10px; */
       font-size: 24px;
+    }
+
+    &--name-tablet {
+      display: none;
     }
 
     &--subname {
