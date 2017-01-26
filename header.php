@@ -43,7 +43,10 @@
               </li>
             </ul>
           </nav>
-          <?php get_search_form(); ?>
+          <div class="header-inner__ftvi">
+            <a itemprop="Copy" href="#" class="bt_widget-vi-on" title="Версия для слабовидящих">
+              <i class="fa fa-eye fa-3x" aria-hidden="true"></i></a>
+          </div>
         </div>
 
         <div class="header-inner__row2">
@@ -52,20 +55,16 @@
               <h1><a href="/" class="header-inner__link">Администрация муниципального образования —
               <br>Кораблинский муниципальный район Рязанской области</a></h1>
             </div>
-            <div class="header-inner__title--name-tablet">
-              <h1><a href="/" class="header-inner__link">Администрация Кораблинского района</a></h1>
-            </div>
             <div class="header-inner__title--subname">
               Официальный сайт
             </div>
-
           </div>
+          <div class="header-inner__title--tablet">
+            <h1><a href="/" class="header-inner__link">Администрация Кораблинского района</a></h1>
+          </div>
+          <?php get_search_form(); ?>
+          <!-- <div class="header-inner__row3">
 
-          <div class="header-inner__row3">
-            <div class="header-inner__ftvi">
-              <a itemprop="Copy" href="#" class="bt_widget-vi-on" title="Версия для слабовидящих">
-                <i class="fa fa-eye fa-3x" aria-hidden="true"></i></a>
-            </div>
             <div class="menu-horizontal  menu-horizontal--buttom-right">
               <ul class="menu-horizontal__list">
                 <li class="menu-horizontal__item">
@@ -76,7 +75,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>

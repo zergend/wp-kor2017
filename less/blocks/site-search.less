@@ -1,12 +1,16 @@
 .site-search {
   text-align: right;
+  height: 32px;
   border-bottom: 1px solid @dark-blue-grey;
+  margin-bottom: 10px;
 
   &__form {
     position: relative;
     min-width: 300px;
     margin: 0 auto;
-
+    @media @mobile-widths-only {
+      min-width: 200px;
+    }
     background: @light-blue-grey;
 
     & button,
