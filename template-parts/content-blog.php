@@ -10,6 +10,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="archive__entry-content">
 		<?php
+		if ( has_post_thumbnail() ) { // миниатюра
+			$img_tmb = get_the_post_thumbnail();
+		} else {
 			$content = get_the_content();
 			$pattern = '/https?.+?\.(jpg|png|JPG)"/';
 			$i = preg_match_all($pattern, $content, $matches, PREG_PATTERN_ORDER);
@@ -20,9 +23,7 @@
 				} else {
 				$img_tmb = '';
 				}
-		?>
-
-		<?php
+		}
 			if ($img_tmb != '') {
 				echo '<div class="archive__tmb">';
 				echo '<a href="';
@@ -32,6 +33,7 @@
 				echo '</a>';
 				echo '</div>';
 			}
+
 		?>
 
 		<div class="archive__post">

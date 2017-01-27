@@ -19,6 +19,22 @@
     margin-left: -1.5em;
   }
 
+  &__video-post {
+    text-align: center;
+
+    & p {
+      text-indent: 0;
+    }
+
+    & iframe {
+
+      @media @mobile-widths-only {
+        width: 320px;
+        height: 240px;
+      }
+    }
+  }
+
   &__post {
     .flex-row-between();
   }

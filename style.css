@@ -1327,6 +1327,18 @@ img {
 .entry-content__single-post p > img:first-child {
   margin-left: -1.5em;
 }
+.entry-content__video-post {
+  text-align: center;
+}
+.entry-content__video-post p {
+  text-indent: 0;
+}
+@media (max-width: 767px) {
+  .entry-content__video-post iframe {
+    width: 320px;
+    height: 240px;
+  }
+}
 .entry-content__post {
   display: flex;
   flex-direction: row;
