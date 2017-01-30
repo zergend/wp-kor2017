@@ -31,7 +31,27 @@
       <div class="header-inner__content">
         <div class="header-inner__row1">
           <nav class="menu-horizontal  menu-horizontal--top-left">
-            <ul class="menu-horizontal__list">
+            <?php
+            wp_nav_menu( array( // меню
+              'theme_location'  => 'header-menu',
+              'menu'            => '',
+              'container'       => false,
+              'container_class' => '',
+              'container_id'    => '',
+              'menu_class'      => 'menu-horizontal__list',
+              'menu_id'         => '',
+              'echo'            => true,
+              'fallback_cb'     => false,
+              'before'          => '',
+              'after'           => '',
+              'link_before'     => '',
+              'link_after'      => '',
+              'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              'depth'           => 0,
+              'walker'          => new walker_horizontal_nav_menu
+            ) );
+            ?>
+            <!-- <ul class="menu-horizontal__list">
               <li class="menu-horizontal__item">
                 <a href="#">Новости</a>
               </li>
@@ -41,7 +61,7 @@
               <li class="menu-horizontal__item">
                 <a href="#">Открытые данные</a>
               </li>
-            </ul>
+            </ul> -->
           </nav>
           <div class="header-inner__ftvi">
             <a itemprop="Copy" href="#" class="bt_widget-vi-on" title="Версия для слабовидящих">
