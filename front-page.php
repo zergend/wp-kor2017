@@ -57,6 +57,37 @@
 
     <div class="content-block  content-block--full  content-block__video-posts">
       <div class="content-block__label">Видео</div>
+      <div class="masonry masonry--video">
+
+      <?php
+      $args = array(
+      	'post_type' => 'post',
+        'posts_per_page' => 4,
+      	'tax_query' => array(
+      		array(
+      			'taxonomy' => 'post_format',
+      			'field'    => 'slug',
+      			'terms' => array( 'post-format-video' )
+      		)
+      	)
+      );
+        // $posts = get_posts( $args );
+
+        query_posts($args);
+          while (have_posts()) : the_post();
+      ?>
+        <div class="masonry__item">
+      <?php
+            get_template_part( 'template-parts/content', 'masonry-video' );
+      ?>
+        </div>
+      <?php
+          endwhile;
+        wp_reset_query(); // сброс
+
+      ?>
+
+      </div> <!-- .masonry .masonry--video -->
     </div>
 
     <div class="content-block  content-block--full  content-block__gallery">

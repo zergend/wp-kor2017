@@ -616,7 +616,7 @@ img {
   left: -5px;
   display: none;
   /* width:180px; */
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 9px gray;
 }
 .menu-horizontal__list.sub-menu a {
   z-index: 50;
@@ -1095,6 +1095,69 @@ img {
 }
 .content-block__label--alert {
   color: #cc0000;
+}
+/* адаптивная плиточная раскладка */
+/* плиточная адаптивная раскладка */
+.masonry {
+  /* margin: 1.5em 0; */
+  padding: 0;
+  column-gap: 1.5em;
+  /* Общее расстояние между колонками */
+  font-size: .85em;
+  -moz-column-gap: 1.5em;
+  /* Расстояние между колонками для Firefox */
+  -webkit-column-gap: 1.5em;
+  /* Расстояние между колонками  для Safari, Chrome и iOS */
+}
+.masonry__item {
+  /* display: inline-block; */
+  background: #fff;
+  padding: 0;
+  margin: 0 0 1.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  /* Изменения алгоритма расчета ширины и высоты элемента.*/
+  -moz-box-sizing: border-box;
+  /* Для Firefox */
+  -webkit-box-sizing: border-box;
+  /* Для Safari, Chrome, iOS иAndroid */
+  box-shadow: 2px 2px 4px 0 #ccc;
+  /* Внешняя тень плиток */
+}
+.masonry img,
+.masonry iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media only screen and (min-width: 400px) {
+  .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .masonry {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .masonry {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .masonry {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
 }
 /* widget (in column) */
 .widget-area {
