@@ -51,17 +51,6 @@
               'walker'          => new walker_horizontal_nav_menu
             ) );
             ?>
-            <!-- <ul class="menu-horizontal__list">
-              <li class="menu-horizontal__item">
-                <a href="#">Новости</a>
-              </li>
-              <li class="menu-horizontal__item">
-                <a href="#">Анонсы, объявления</a>
-              </li>
-              <li class="menu-horizontal__item">
-                <a href="#">Открытые данные</a>
-              </li>
-            </ul> -->
           </nav>
           <div class="header-inner__ftvi">
             <a itemprop="Copy" href="#" class="bt_widget-vi-on" title="Версия для слабовидящих">
@@ -83,19 +72,6 @@
             <h1><a href="/" class="header-inner__link">Администрация Кораблинского района</a></h1>
           </div>
           <?php get_search_form(); ?>
-          <!-- <div class="header-inner__row3">
-
-            <div class="menu-horizontal  menu-horizontal--buttom-right">
-              <ul class="menu-horizontal__list">
-                <li class="menu-horizontal__item">
-                  <a href="#">Нормативная база</a>
-                </li>
-                <li class="menu-horizontal__item">
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div> -->
         </div>
 
       </div>

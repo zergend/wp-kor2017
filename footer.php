@@ -1,5 +1,11 @@
 <footer class="main-footer">
-  <div class="main-footer__map" id="yamap"></div>
+  <?php
+    if( is_front_page() ) {
+      echo '<div class="main-footer__map" id="yamap"></div>';
+    }else {
+      echo '<div class="main-footer__empty-block"></div>';
+    }
+  ?>
 
   <div class="footer-inner">
     <div class="column column--footer  column--left-footer">

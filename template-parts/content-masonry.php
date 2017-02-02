@@ -28,6 +28,7 @@
 				echo the_permalink();
 				echo '" rel="bookmark">';
 				echo $img_tmb;
+				the_title( '<h3 class="masonry--title">', '</h3>' );
 				echo '</a>';
 				// echo '</div>';
 			}

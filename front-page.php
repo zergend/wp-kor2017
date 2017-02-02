@@ -56,7 +56,7 @@
     </div>
 
     <div class="content-block  content-block--full  content-block__video-posts">
-      <div class="content-block__label">Видео</div>
+      <div class="content-block__label"><a href="<?php echo get_tag_link(36); ?>">Видео >>></a></div>
       <div class="masonry masonry--video">
 
       <?php
@@ -71,27 +71,52 @@
       		)
       	)
       );
-        // $posts = get_posts( $args );
-
         query_posts($args);
-          while (have_posts()) : the_post();
+        while (have_posts()) : the_post();
       ?>
         <div class="masonry__item">
       <?php
-            get_template_part( 'template-parts/content', 'masonry-video' );
+        get_template_part( 'template-parts/content', 'masonry' );
       ?>
         </div>
       <?php
-          endwhile;
+        endwhile;
         wp_reset_query(); // сброс
-
       ?>
 
       </div> <!-- .masonry .masonry--video -->
     </div>
 
     <div class="content-block  content-block--full  content-block__gallery">
-      <div class="content-block__label">Фотогалерея</div>
+      <div class="content-block__label">Фотогалерея >>></div>
+        <div class="masonry masonry--gallery">
+
+        <?php
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 8,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'post_format',
+              'field'    => 'slug',
+              'terms' => array( 'post-format-gallery' )
+            )
+          )
+        );
+          query_posts($args);
+          while (have_posts()) : the_post();
+        ?>
+          <div class="masonry__item masonry__item--gallery">
+        <?php
+          get_template_part( 'template-parts/content', 'masonry' );
+        ?>
+          </div>
+        <?php
+          endwhile;
+          wp_reset_query(); // сброс
+        ?>
+
+      </div> <!-- .masonry .masonry--gallery -->
     </div>
   </div>
 
