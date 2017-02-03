@@ -18,7 +18,8 @@
   }
     ?>
 
-  <?php wp_head(); ?>
+  <?php wp_head();
+  global $themeoptions; ?>
 </head>
 <body>
   <header class="main-header">

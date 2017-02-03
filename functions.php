@@ -81,6 +81,9 @@ function __nav_hasSub( $item_id, $items ){
 endif;
 add_action( 'after_setup_theme', 'kor622017_setup' );
 
+// функции темы
+include('functions/settings.php');
+
 // включение поддержки форматов постов
 add_theme_support( 'post-formats', array('aside', 'gallery', 'image', 'video') );
 

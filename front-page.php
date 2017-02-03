@@ -30,7 +30,7 @@
 
     <div class="content-inner">
       <div class="content-block  content-block--helf  content-block--anounce">
-        <div class="content-block__label">Объявления</div>
+        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['anounce']); ?>">Объявления >>></a></div>
 
         <?php
           query_posts('cat=13&posts_per_page=5');
@@ -42,7 +42,7 @@
 
       </div>
       <div class="content-block  content-block--helf  content-block--news">
-        <div class="content-block__label">Новости</div>
+        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['news']); ?>">Новости >>></a></div>
 
         <?php
           query_posts('cat=11&posts_per_page=5');
@@ -56,7 +56,7 @@
     </div>
 
     <div class="content-block  content-block--full  content-block__video-posts">
-      <div class="content-block__label"><a href="<?php echo get_tag_link(36); ?>">Видео >>></a></div>
+      <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['video']); ?>">Видео >>></a></div>
       <div class="masonry masonry--video">
 
       <?php
@@ -88,33 +88,50 @@
     </div>
 
     <div class="content-block  content-block--full  content-block__gallery">
-      <div class="content-block__label">Фотогалерея >>></div>
-        <div class="masonry masonry--gallery">
+      <div class="content-block__label">
 
-        <?php
-        $args = array(
-          'post_type' => 'post',
-          'posts_per_page' => 8,
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'post_format',
-              'field'    => 'slug',
-              'terms' => array( 'post-format-gallery' )
-            )
+          <select name="event-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+           <option value=""><?php echo esc_attr('Публикации с галереями'); ?></option>
+           <?php
+            $args = array ('include' => $themeoptions['gallery'] );
+            $categories =  get_categories($args);
+            foreach ($categories as $category) {
+          	$option = '<option value="/category/archives/'.$category->category_nicename.'">';
+          	$option .= $category->cat_name;
+          	$option .= ' ('.$category->category_count.')';
+          	$option .= '</option>';
+          	echo $option;
+            }
+           ?>
+          </select>
+
+        </div>
+      <div class="masonry masonry--gallery">
+
+      <?php
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 8,
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'post_format',
+            'field'    => 'slug',
+            'terms' => array( 'post-format-gallery' )
           )
-        );
-          query_posts($args);
-          while (have_posts()) : the_post();
-        ?>
-          <div class="masonry__item masonry__item--gallery">
-        <?php
-          get_template_part( 'template-parts/content', 'masonry' );
-        ?>
-          </div>
-        <?php
-          endwhile;
-          wp_reset_query(); // сброс
-        ?>
+        )
+      );
+        query_posts($args);
+        while (have_posts()) : the_post();
+      ?>
+        <div class="masonry__item masonry__item--gallery">
+      <?php
+        get_template_part( 'template-parts/content', 'masonry' );
+      ?>
+        </div>
+      <?php
+        endwhile;
+        wp_reset_query(); // сброс
+      ?>
 
       </div> <!-- .masonry .masonry--gallery -->
     </div>
