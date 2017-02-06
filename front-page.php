@@ -2,7 +2,11 @@
 
 <div class="main-marque">
   <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
-    ПРИРОДОПОЛЬЗОВАТЕЛЯМ О ПРЕДОСТАВЛЕНИИ ОТЧЕТОВ ПО ФОРМЕ № 2-ТП (ОТХОДЫ) ... НОВЫЙ ПОРЯДОК ПРИМЕНЕНИЯ КОНТРОЛЬНО – КАССОВОЙ ТЕХНИКИ ... ПОЗДРАВЛЕНИЕ ГЛАВЫ РАЙОНА С ДНЁМ МАТЕРИ ...
+    <?php $CountPost = 5; $CategoryID = $themeoptions['anounce']; ?>
+    <?php $cnt = 0; $my_query = new WP_Query("cat=".$CategoryID."&showposts=".$CountPost);
+    while ($my_query->have_posts()) : $my_query->the_post(); ?>
+    <span class="main-marque__post"><a href="<?php the_permalink() ?>"><?php the_title(); ?> ...</a></span>
+    <?php endwhile; ?>
   </marquee>
 </div>
 <main class="main-content">
@@ -33,7 +37,7 @@
         <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['anounce']); ?>">Объявления >>></a></div>
 
         <?php
-          query_posts('cat=13&posts_per_page=5');
+          query_posts('cat='. $themeoptions['anounce'] .'&posts_per_page=5');
             while (have_posts()) : the_post();
               get_template_part( 'template-parts/content', 'title' );
             endwhile;
@@ -45,7 +49,7 @@
         <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['news']); ?>">Новости >>></a></div>
 
         <?php
-          query_posts('cat=11&posts_per_page=5');
+          query_posts('cat='. $themeoptions['news'] .'&posts_per_page=5');
             while (have_posts()) : the_post();
               get_template_part( 'template-parts/content', 'title' );
             endwhile;
