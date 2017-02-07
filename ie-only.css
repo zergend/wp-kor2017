@@ -1,0 +1,17 @@
+.ie-only-block {
+  color: red;
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 15px auto;
+  text-transform: none;
+  font-size: 18px;
+  /* font-weight: 700; */
+  position: fixed;
+  top: 0;
+  right: 50px;
+  border: 2px dotted #ccc;
+  background-color: #fff;
+  padding: 15px;
+  z-index: 999;
+}

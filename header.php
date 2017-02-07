@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Администрация Кораблинского района</title>
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=cyrillic" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+  <!--[if IE]>
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/ie-only.css" />
+  <![endif]-->
   <?php
   if( is_singular($post_types) ){
     echo "<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=4.7'></script>";
@@ -23,6 +27,14 @@
 </head>
 <body>
   <header class="main-header">
+    <div class="ie-only-block">
+      <strong>ВНИМАНИЕ!</strong> В браузере Internet Explorer сайт отображается некорректно, ведутся работы по обеспечению совместимости.
+      Работы могут занять значительный период времени, рекомендуем использовать браузеры, поддерживающие современные web-стандарты:
+      <noindex><a href="https://www.mozilla.org/ru/firefox/" target="_blank" rel="nofollow">Mozilla Firefox</a></noindex>,
+      <noindex><a href="https://www.google.ru/chrome/" target="_blank" rel="nofollow">Google Chrome</a></noindex>,
+      <noindex><a href="https://browser.yandex.ru/" target="_blank">Яндекс.Браузер</a></noindex>,
+      <noindex><a href="http://www.opera.com/ru/" target="_blank" rel="nofollow">Оpera</a></noindex>.
+    </div>
     <div class="header-inner">
       <div class="header-inner__logo">
         <a href="/" title="На главную">

@@ -1,13 +1,15 @@
 <?php get_header(); ?>
 
 <div class="main-marque">
-  <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
-    <?php $CountPost = 5; $CategoryID = $themeoptions['anounce']; ?>
-    <?php $cnt = 0; $my_query = new WP_Query("cat=".$CategoryID."&showposts=".$CountPost);
-    while ($my_query->have_posts()) : $my_query->the_post(); ?>
-    <span class="main-marque__post"><a href="<?php the_permalink() ?>"><?php the_title(); ?> ...</a></span>
+  <!-- <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()"> -->
+
+    <?php $CountPost = 10; $CategoryID = $themeoptions['anounce']; ?>
+    <?php $my_query = new WP_Query("cat=".$CategoryID."&showposts=".$CountPost);
+          while ($my_query->have_posts()) : $my_query->the_post(); ?>
+    <p class="main-marque__post"><a href="<?php the_permalink() ?>"><?php the_title(); ?> ...</a></p>
     <?php endwhile; ?>
-  </marquee>
+
+  <!-- </marquee> -->
 </div>
 <main class="main-content">
 
