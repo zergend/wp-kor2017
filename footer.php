@@ -17,8 +17,7 @@
       </div>
       <div class="footer-inner__metrika">
         <!-- Yandex.Metrika informer -->
-        <a href="https://metrika.yandex.ru/stat/?id=21113743&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/21113743/3_0_5284A0FF_326480FF_1_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer"
-              data-cid="21113743" data-lang="ru" /></a>
+        <a href="https://metrika.yandex.ru/stat/?id=21113743&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/21113743/3_0_5284A0FF_326480FF_1_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="21113743" data-lang="ru" /></a>
         <!-- /Yandex.Metrika informer -->
       </div>
     </div>

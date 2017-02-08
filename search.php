@@ -24,7 +24,10 @@
          */
         get_template_part( 'template-parts/content', 'blog' );
       endwhile;
-        the_posts_navigation();
+        // the_posts_navigation();
+        if (function_exists("kama_pagenavi")) :
+          kama_pagenavi();
+        endif;
       else :
         get_template_part( 'template-parts/content', 'none' );
       endif; ?>
