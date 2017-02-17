@@ -39,7 +39,12 @@
   </div>
 </footer>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<?php
+  if( is_front_page() ) {
+    echo "<script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript'></script>";
+  }
+?>
+
 <script src="
 <?php echo get_template_directory_uri();
 if( is_front_page() ){

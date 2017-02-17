@@ -421,20 +421,20 @@ function kama_pagenavi( $before = '', $after = '', $echo = true, $args = array()
 		}
 		// назад
 		if ( $back_text && $paged != 1 )
-			$out .= '<a class="prev" href="'. ( ($paged-1)==1 ? $first_url : str_replace( '___', ($paged-1), $link_base ) ) .'">'. $back_text .'</a> ';
+			$out .= '<a class="wp-pagenavi__link wp-pagenavi--prev" href="'. ( ($paged-1)==1 ? $first_url : str_replace( '___', ($paged-1), $link_base ) ) .'">'. $back_text .'</a> ';
 		// в начало
 		if ( $start_page >= 2 && $pages_to_show < $max_page ) {
-			$out.= '<a class="first" href="'. $first_url .'">'. ( $first_page_text ? $first_page_text : 1 ) .'</a> ';
-			if( $dotright_text && $start_page != 2 ) $out .= '<span class="extend">'. $dotright_text .'</span> ';
+			$out.= '<a class="wp-pagenavi__link wp-pagenavi--first" href="'. $first_url .'">'. ( $first_page_text ? $first_page_text : 1 ) .'</a> ';
+			if( $dotright_text && $start_page != 2 ) $out .= '<span class="wp-pagenavi--extend">'. $dotright_text .'</span> ';
 		}
 		// пагинация
 		for( $i = $start_page; $i <= $end_page; $i++ ) {
 			if( $i == $paged )
-				$out .= '<span class="current">'.$i.'</span> ';
+				$out .= '<span class="wp-pagenavi--current">'.$i.'</span> ';
 			elseif( $i == 1 )
-				$out .= '<a href="'. $first_url .'">1</a> ';
+				$out .= '<a class="wp-pagenavi__link" href="'. $first_url .'">1</a> ';
 			else
-				$out .= '<a href="'. str_replace( '___', $i, $link_base ) .'">'. $i .'</a> ';
+				$out .= '<a class="wp-pagenavi__link" href="'. str_replace( '___', $i, $link_base ) .'">'. $i .'</a> ';
 		}
 
 		//ссылки с шагом
@@ -443,20 +443,20 @@ function kama_pagenavi( $before = '', $after = '', $echo = true, $args = array()
 			for( $i = $end_page+1; $i<=$max_page; $i++ ) {
 				if( $i % $step_link == 0 && $i !== $num_pages ) {
 					if ( ++$dd == 1 )
-						$out.= '<span class="extend">'. $dotright_text2 .'</span> ';
-					$out.= '<a href="'. str_replace( '___', $i, $link_base ) .'">'. $i .'</a> ';
+						$out.= '<span class="wp-pagenavi--extend">'. $dotright_text2 .'</span> ';
+					$out.= '<a class="wp-pagenavi__link" href="'. str_replace( '___', $i, $link_base ) .'">'. $i .'</a> ';
 				}
 			}
 		}
 		// в конец
 		if ( $end_page < $max_page ) {
 			if( $dotright_text && $end_page != ($max_page-1) )
-				$out.= '<span class="extend">'. $dotright_text2 .'</span> ';
-			$out.= '<a class="last" href="'. str_replace( '___', $max_page, $link_base ) .'">'. ( $last_page_text ? $last_page_text : $max_page ) .'</a> ';
+				$out.= '<span class="wp-pagenavi--extend">'. $dotright_text2 .'</span> ';
+			$out.= '<a class="wp-pagenavi__link wp-pagenavi--last" href="'. str_replace( '___', $max_page, $link_base ) .'">'. ( $last_page_text ? $last_page_text : $max_page ) .'</a> ';
 		}
 		// вперед
 		if ( $next_text && $paged != $end_page )
-			$out.= '<a class="next" href="'. str_replace( '___', ($paged+1), $link_base ) .'">'. $next_text .'</a> ';
+			$out.= '<a class="wp-pagenavi__link wp-pagenavi--next" href="'. str_replace( '___', ($paged+1), $link_base ) .'">'. $next_text .'</a> ';
 
 	$out .= "</div>". $after ."\n";
 
