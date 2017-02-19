@@ -1,9 +1,35 @@
-@import "normalize1.less";
-/* START */
+/*
+Theme Name: AK-17
+Theme URI: http://blogsector.ru/
+Author: Дёмин Сергей
+Author URI: http://blogsector.ru/
+Description: AK-17 - тема, созданная для официального сайта администрации МО - Кораблинский муниципальный район Рязанской области
+Version: 1.0
+Text Domain: ak-17
+Tags: three-column, right-sidebar, left-sidebar, accessibility-ready, custom-colors, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options,  translation-ready
+*/
+
+/* ******** TABLE OF CONTENTS ******** */
+/*  1. Normalize by necolas            */
+/*  2. Custom Normalize                */
+/*  3. BLOCKS                          */
+/*  4. Wordpress blocks                */
+/* *********************************** */
+
+/* *********************************** */
+/*  1. Normalize by necolas            */
+@import "normalize-necolas.less";
+/* END OF 1. Normalize by  necolas     */
+
+/* *********************************** */
+/*  2. Custom Normalize                */
 @import "normalize.less";
 @import "variables.less";
 @import "mixins.less";
-/* BLOCKS */
+/*  END OF 2. Custom Normalize         */
+
+/* *********************************** */
+/*  3. BLOCKS                          */
 /* header */
 @import "blocks/main-header.less";
 @import "blocks/header-inner.less";
@@ -26,8 +52,10 @@
 /* footer */
 @import "blocks/main-footer.less";
 @import "blocks/footer-inner.less";
+/*  END OF 3. BLOCKS                   */
 
-/* wordpress blocks */
+/* *********************************** */
+/*  4. Wordpress blocks                */
 @import "wp-blocks/post.less";
 @import "wp-blocks/archive.less";
 @import "wp-blocks/error-404.less";
@@ -36,3 +64,4 @@
 @import "wp-blocks/fotorama.less";
 @import "wp-blocks/widget.less";
 @import "wp-blocks/wp-pagenavi.less";
+/*  END OF 4. Wordpress blocks          */

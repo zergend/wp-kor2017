@@ -1,12 +1,11 @@
 .wp-pagenavi {
 
-  &__link {
+  &__link,
+  &--current,
+  &--extend {
     padding-right: 5px;
-    padding-left: 5px;
+
     border-right: 1px solid @dark-blue-grey;
-    &:first-child {
-      border-left: 1px solid @dark-blue-grey;
-    }
   }
 
   &--next,

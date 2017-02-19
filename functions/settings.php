@@ -49,7 +49,7 @@ var $default_settings = array(
 <p><input placeholder="Объявления" style="width:300px;" name="cp_cat-anounce" id="cp_cat-anounce" value="'.$this->options["anounce"].'"><label> - id категории для ссылки заголовка <strong>"Объявления"</strong></label></p>
  <p><input placeholder="Новости" style="width:300px;" name="cp_cat-news" id="cp_cat-news" value="'.$this->options["news"].'"><label> - id категории для ссылки заголовка <strong>"Новости"</strong></label></p>
  <p><input placeholder="Видео" style="width:300px;" name="cp_cat-video" id="cp_cat-video" value="'.$this->options["video"].'"><label> - id категории для ссылки заголовка <strong>"Видео"</strong></label></p>
-  <p><input placeholder="Фотогалерея" style="width:300px;" name="cp_cat-gallery" id="cp_cat-gallery" value="'.$this->options["gallery"].'"><label> - id категории (категорий через запятую) для ссылки заголовка <strong>"Фотогалерея"</strong></label></p>
+  <p><input placeholder="Фотогалерея" style="width:300px;" name="cp_cat-gallery" id="cp_cat-gallery" value="'.$this->options["gallery"].'"><label> - id категории (несколько категорий - через запятую) для ссылки заголовка <strong>"Избранные рубрики" </strong> <br> (указать категории, содержащие галереи или фотографии)</label></p>
 
  <h3>Социальные сети</h3>
  <p><input placeholder="Ссылка на страницу facebook" style="width:300px;" name="cp_facebook" id="cp_facebook" value="'.$this->options["facebook"].'"><label> - facebook</label></p>

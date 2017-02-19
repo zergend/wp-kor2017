@@ -24,7 +24,7 @@
     </div>
 
 		<div class="error-404__categories">
-			<h2 class="error-404__title"><?php esc_html_e( 'Популярные категории', '_s' ); ?></h2>
+			<h2 class="error-404__title"><?php esc_html_e( 'Популярные рубрики', '_s' ); ?></h2>
 			<ul>
 			<?php
 				wp_list_categories( array(

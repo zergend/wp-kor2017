@@ -97,7 +97,7 @@
       <div class="content-block__label">
 
           <select name="event-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
-           <option value=""><?php echo esc_attr('Публикации с галереями'); ?></option>
+           <option value=""><?php echo esc_attr('Избранные рубрики'); ?></option>
            <?php
             $args = array ('include' => $themeoptions['gallery'] );
             $categories =  get_categories($args);
