@@ -1,12 +1,15 @@
 <div class="main-slider">
   <?php
-  query_posts('posts_per_page=50');
+  $args = array('posts_per_page' => 30,
+                'ignore_sticky_posts' => 1);
+  // query_posts('posts_per_page=50');
+  $query = new WP_Query( $args );
   $i = 0;
   $img = array('','','','','');
   $title = array('','','','','');
   $link = array('','','','','');
   ?>
-  <?php  while (have_posts()) : the_post();
+  <?php  while ($query->have_posts()) : $query->the_post();
   $content = get_the_content();
   $pattern = '/https?.+?\.(jpg|png|JPG)"/';
   $match = preg_match_all($pattern, $content, $matches, PREG_PATTERN_ORDER);

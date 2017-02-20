@@ -23,7 +23,7 @@
     </div>
     <div class="column  column--footer  column--middle-footer">
       <ul class="footer-inner__nav">
-        <li><a href="#">Карта сайта</a></li>
+        <li><a href="/sitemap/">Карта сайта</a></li>
         <li><a href="#">Все рубрики</a></li>
         <li><a href="#">Хронология</a></li>
       </ul>
