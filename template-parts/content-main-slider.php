@@ -2,7 +2,6 @@
   <?php
   $args = array('posts_per_page' => 30,
                 'ignore_sticky_posts' => 1);
-  // query_posts('posts_per_page=50');
   $query = new WP_Query( $args );
   $i = 0;
   $img = array('','','','','');

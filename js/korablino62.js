@@ -43,8 +43,8 @@ function changePosition(link) {
 var timeoutID;
 
 function startTimer() {
-    // ожидание в течение 2 секунд перед вызовом goInactive
-    timeoutID = window.setInterval(goToNextItem, 5000);
+    // ожидание в течение N секунд перед вызовом goInactive
+    timeoutID = window.setInterval(goToNextItem, 7000);
 }
 startTimer();
 

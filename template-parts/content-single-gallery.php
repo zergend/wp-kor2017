@@ -26,7 +26,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="fotorama" data-loop="true" data-nav="thumbs" data-width="100%" data-ratio="800/600" data-minwidth="200"	data-maxwidth="760" data-minheight="150"	data-maxheight="100%">
+	<div class="fotorama" data-loop="true" data-nav="thumbs" data-width="100%" data-ratio="800/600" data-minwidth="200"	data-maxwidth="760" data-minheight="150"	data-maxheight="100%" data-allowfullscreen="true">
 
 		<?php
 		$content = get_the_content();
