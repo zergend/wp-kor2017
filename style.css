@@ -1310,6 +1310,7 @@ td {
   font-size: 16px;
 }
 .menu-vertical__item a:hover {
+  cursor: pointer;
   color: #326480;
   background-color: #d6e0e6;
 }
