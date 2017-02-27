@@ -1575,6 +1575,9 @@ td {
   display: inline-block;
   box-shadow: none;
 }
+.masonry__item a:hover {
+  border-bottom: none;
+}
 .masonry--title {
   text-transform: none;
   min-height: 60px;

@@ -36,23 +36,23 @@
   <input type="radio" name="point" id="slide4" class="main-slider__btn">
   <input type="radio" name="point" id="slide5" class="main-slider__btn">
   <div class="main-slider__content">
-    <div class="main-slider__item  main-slider__item--1" style="background-image: url(<?php echo $img[0]; ?>); ">
+    <div class="main-slider__item  main-slider__item--1" style="background-image: url(<?php echo $img[0]; ?>); background-position: center; ">
       <a href="<?php echo $link[0]; ?>" class="main-slider__link1"></a>
       <?php echo $title[0]; ?>
     </div>
-    <div class="main-slider__item  main-slider__item--2" style="background-image: url(<?php echo $img[1]; ?>); ">
+    <div class="main-slider__item  main-slider__item--2" style="background-image: url(<?php echo $img[1]; ?>); background-position: center; ">
       <a href="<?php echo $link[1]; ?>" class="main-slider__link1"></a>
       <?php echo $title[1]; ?>
     </div>
-    <div class="main-slider__item  main-slider__item--3" style="background-image: url(<?php echo $img[2]; ?>); ">
+    <div class="main-slider__item  main-slider__item--3" style="background-image: url(<?php echo $img[2]; ?>); background-position: center; ">
       <a href="<?php echo $link[2]; ?>" class="main-slider__link1"></a>
       <?php echo $title[2]; ?>
     </div>
-    <div class="main-slider__item  main-slider__item--4" style="background-image: url(<?php echo $img[3]; ?>); ">
+    <div class="main-slider__item  main-slider__item--4" style="background-image: url(<?php echo $img[3]; ?>); background-position: center; ">
       <a href="<?php echo $link[3]; ?>" class="main-slider__link1"></a>
       <?php echo $title[3]; ?>
     </div>
-    <div class="main-slider__item  main-slider__item--5" style="background-image: url(<?php echo $img[4]; ?>); ">
+    <div class="main-slider__item  main-slider__item--5" style="background-image: url(<?php echo $img[4]; ?>); background-position: center; ">
       <a href="<?php echo $link[4]; ?>" class="main-slider__link1"></a>
       <?php echo $title[4]; ?>
     </div>
