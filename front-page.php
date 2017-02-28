@@ -15,7 +15,7 @@
     <?php get_template_part( 'template-parts/content', 'main-slider' ); ?>
 
     <div class="content-block  content-block--full  content-block--sticky content-block--alert">
-      <div class="content-block__label content-block__label--alert">Обратите внимание!</div>
+      <div class="content-block__label content-block__label--alert"><strong>Обратите внимание!</strong></div>
 
       <?php
       $sticky = get_option('sticky_posts');
@@ -32,7 +32,7 @@
 
     <div class="content-inner">
       <div class="content-block  content-block--helf  content-block--anounce">
-        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['anounce']); ?>">Объявления >>></a></div>
+        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['anounce']); ?>"><i class="fa fa-info-circle" aria-hidden="true"></i> Объявления >>></a></div>
 
         <?php
           query_posts('cat='. $themeoptions['anounce'] .'&posts_per_page=5');
@@ -44,7 +44,7 @@
 
       </div>
       <div class="content-block  content-block--helf  content-block--news">
-        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['news']); ?>">Новости >>></a></div>
+        <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['news']); ?>"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Новости >>></a></div>
 
         <?php
           query_posts('cat='. $themeoptions['news'] .'&posts_per_page=5');
@@ -58,7 +58,7 @@
     </div>
 
     <div class="content-block  content-block--full  content-block__video-posts">
-      <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['video']); ?>">Видео >>></a></div>
+      <div class="content-block__label"><a href="<?php echo get_category_link($themeoptions['video']); ?>"><i class="fa fa-television" aria-hidden="true"></i> Видео >>></a></div>
       <div class="masonry masonry--video">
 
       <?php
@@ -91,9 +91,9 @@
 
     <div class="content-block  content-block--full  content-block__gallery">
       <div class="content-block__label">
-
+        <i class="fa fa-camera-retro" aria-hidden="true"></i>
           <select name="event-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
-           <option value=""><?php echo esc_attr('Избранные рубрики'); ?></option>
+           <option value=""><?php echo ' Избранные рубрики'; ?></option>
            <?php
             $args = array ('include' => $themeoptions['gallery'] );
             $categories =  get_categories($args);
