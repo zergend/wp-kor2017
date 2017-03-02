@@ -7,10 +7,10 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_single() ) :
+		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -31,5 +31,21 @@
 			the_content();
 		?>
 	</div><!-- .entry-content -->
+
+	<?php if ( get_edit_post_link() ) : ?>
+		<footer class="page__footer">
+			<?php
+				edit_post_link(
+					sprintf(
+						/* translators: %s: Name of current post */
+						esc_html__( 'Редактировать %s', '_s' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			?>
+		</footer><!-- .page__footer -->
+	<?php endif; ?>
 
 </article><!-- #post-## -->
