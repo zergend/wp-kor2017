@@ -494,6 +494,32 @@ td {
 /* *********************************** */
 /*  3. BLOCKS                          */
 /* header */
+.btn {
+  display: inline-block;
+  padding: 15px 10px;
+  color: #fff;
+  background-color: #326480;
+  border: none;
+  text-align: center;
+  text-indent: 0;
+  margin-bottom: 10px;
+}
+h1 .btn,
+h2 .btn,
+h3 .btn,
+h4 .btn,
+h5 .btn,
+h6 .btn {
+  font-weight: normal;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #d6e0e6;
+  color: #326480;
+}
+.btn--200px {
+  width: 200px;
+}
 .main-header {
   margin-top: 16px;
   min-width: 350px;
