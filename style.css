@@ -4,7 +4,7 @@ Theme URI: http://blogsector.ru/
 Author: Дёмин Сергей
 Author URI: http://blogsector.ru/
 Description: AK-17 - тема, созданная для официального сайта администрации МО - Кораблинский муниципальный район Рязанской области
-Version: 1.02
+Version: 1.0
 Text Domain: ak-17
 Tags: three-column, right-sidebar, left-sidebar, accessibility-ready, custom-colors, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options,  translation-ready
 */
@@ -1338,6 +1338,7 @@ h6 .btn {
 .menu-vertical__item a:hover {
   color: #326480;
   background-color: #d6e0e6;
+  cursor: pointer;
 }
 .menu-vertical__item.current-menu-item a {
   background-color: #d6e0e6;
@@ -1926,6 +1927,10 @@ h6 .btn {
     width: 320px;
     height: 240px;
   }
+}
+.entry-content__image-post img {
+  margin-left: auto;
+  margin-right: auto;
 }
 .entry-content__post {
   display: flex;
