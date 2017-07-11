@@ -494,6 +494,32 @@ td {
 /* *********************************** */
 /*  3. BLOCKS                          */
 /* header */
+.btn {
+  display: inline-block;
+  padding: 15px 10px;
+  color: #fff;
+  background-color: #326480;
+  border: none;
+  text-align: center;
+  text-indent: 0;
+  margin-bottom: 10px;
+}
+h1 .btn,
+h2 .btn,
+h3 .btn,
+h4 .btn,
+h5 .btn,
+h6 .btn {
+  font-weight: normal;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #d6e0e6;
+  color: #326480;
+}
+.btn--200px {
+  width: 200px;
+}
 .main-header {
   margin-top: 16px;
   min-width: 350px;
@@ -1313,6 +1339,7 @@ td {
   cursor: pointer;
   color: #326480;
   background-color: #d6e0e6;
+  cursor: pointer;
 }
 .menu-vertical__item.current-menu-item a {
   background-color: #d6e0e6;
@@ -1575,6 +1602,9 @@ td {
 .masonry__item--gallery {
   display: inline-block;
   box-shadow: none;
+}
+.masonry__item a:hover {
+  border-bottom: none;
 }
 .masonry--title {
   text-transform: none;
@@ -1898,6 +1928,10 @@ td {
     width: 320px;
     height: 240px;
   }
+}
+.entry-content__image-post img {
+  margin-left: auto;
+  margin-right: auto;
 }
 .entry-content__post {
   display: flex;

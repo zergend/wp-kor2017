@@ -16,6 +16,9 @@
         case "video":
           get_template_part( 'template-parts/content', 'video' );
           break;
+        case "image":
+          get_template_part( 'template-parts/content', 'image' );
+          break;
         case "aside":
           get_template_part( 'template-parts/content', 'single' );
           break;

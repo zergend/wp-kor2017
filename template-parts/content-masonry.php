@@ -26,7 +26,7 @@
 				// echo '<div class="archive__tmb">';
 				echo '<a href="';
 				echo the_permalink();
-				echo '" rel="bookmark">';
+				echo '" rel="bookmark" class="masonry--link">';
 				echo $img_tmb;
 				the_title( '<h3 class="masonry--title">', '</h3>' );
 				echo '</a>';

@@ -60,6 +60,8 @@ echo'/js/korablino62single.js';
   <div><img src="https://mc.yandex.ru/watch/21113743" style="position:absolute; left:-9999px;" alt="" /></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+
+<?php wp_footer(); ?>
 </body>
 
 </html>
