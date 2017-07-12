@@ -19,6 +19,9 @@
         <!-- Yandex.Metrika informer -->
         <a href="https://metrika.yandex.ru/stat/?id=21113743&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/21113743/3_0_5284A0FF_326480FF_1_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="21113743" data-lang="ru" /></a>
         <!-- /Yandex.Metrika informer -->
+
+<span id="sputnik-informer"></span>
+
       </div>
     </div>
     <div class="column  column--footer  column--middle-footer">
@@ -30,7 +33,7 @@
     </div>
     <div class="column  column--footer  column--right-footer">
       <div class="footer-inner__rights">
-        © 2017 Все права защищены и охраняются законом. Использование материалов сайта разрешено только с разрешения администрации Кораблинского района. При цитировании материалов в сети Интернет гиперссылка на <a href="/">korablino62.ru</a> обязательна.
+        © 2017 Все права защищены и охраняются законом. Использование материалов сайта допускается только с разрешения администрации Кораблинского района. При цитировании материалов в сети Интернет гиперссылка на <a href="/">korablino62.ru</a> обязательна.
       </div>
       <div class="footer-inner__autor">
         Разработка и сопровождение: <a href="http://blogsector.ru/">blogsector.ru</a>
@@ -60,6 +63,16 @@ echo'/js/korablino62single.js';
   <div><img src="https://mc.yandex.ru/watch/21113743" style="position:absolute; left:-9999px;" alt="" /></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+
+<!-- Sputnik counter -->
+<script type="text/javascript">
+       (function(d, t, p) {
+           var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+           j.src = ("https:" == p ? "https:" : "http:") + "//stat.sputnik.ru/cnt.js";
+           var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+       })(document, "script", document.location.protocol);
+</script>
+<!-- /Sputnik counter -->
 
 <?php wp_footer(); ?>
 </body>

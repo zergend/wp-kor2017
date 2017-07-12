@@ -147,6 +147,11 @@ function disable_wp_emojis_in_tinymce( $plugins ) {
     }
 }
 
+// Убираем "Рубрика:", "Метка:" из заголовка архивов
+add_filter('get_the_archive_title', function( $title ){
+	return preg_replace('~^[^:]+: ~', '', $title );
+});
+
 ////// подключаем дополнительные функции
 // функции темы
 include('functions/settings.php');
